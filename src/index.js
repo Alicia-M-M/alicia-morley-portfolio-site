@@ -5,6 +5,7 @@ import 'typeface-catamaran';
 import 'typeface-merriweather-sans';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import App from './App';
 
 ReactDOM.render(

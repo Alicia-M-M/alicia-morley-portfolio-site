@@ -16,9 +16,8 @@ h2 {
 h4{
   font-family:"Catamaran";
   font-weight:700;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
-
 
 /* navbar */
 
@@ -36,15 +35,28 @@ h4{
 .navbar-brand {
   font-family:"Catamaran";
   font-weight:900;
-  font-size: 3rem;
+  font-size: 1.5rem;
   color:black;
 }
 
 .site-footer {
-  position: absolute;
-  bottom:0;
+  color:#FFFFFF;
+  background-color: #779A98;
   width: 100%;
   height: 400px;
   line-height: 60px;
-  background-color: #f5f5f5;
+}
+
+
+@media (min-width: 992px) {
+
+  .navbar-brand{
+    font-size: 3rem;
+  }
+
+  h4{
+    font-size:1.5rem;
+  }
+
+  
 }

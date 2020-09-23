@@ -21,7 +21,7 @@ class Header extends Component {
 
     render() {
         return (
-            <Navbar light sticky="top" expand="md">
+            <Navbar light className="bg-white" sticky="top" expand="md">
                 <div className="container-fluid px-5">
                     <NavbarBrand className="mr-auto" href="/">ALICIA MORLEY</NavbarBrand>
                     <NavbarToggler onClick={this.toggleNav} />
@@ -29,22 +29,22 @@ class Header extends Component {
                         <Nav navbar className="ml-auto" >
                             <NavItem>
                                 <NavLink className="nav-link" to="/home">
-                                    <i className="fa fa-home fa-lg" /> HOME
+                                    HOME
                                     </NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink className="nav-link" to="/directory">
-                                    <i className="fa fa-list fa-lg" /> ABOUT
+                                    ABOUT
                                     </NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink className="nav-link" to="/aboutus">
-                                    <i className="fa fa-info fa-lg" /> WORK
+                                    WORK
                                     </NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink className="nav-link" to="/contactus">
-                                    <i className="fa fa-address-card fa-lg" /> CONTACT
+                                    CONTACT
                                     </NavLink>
                             </NavItem>
                         </Nav>
