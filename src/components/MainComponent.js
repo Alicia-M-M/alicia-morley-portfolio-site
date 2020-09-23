@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './HeaderComponent';
+import Graphic from './GraphicComponent';
 import Footer from './FooterComponent';
 import Work from './WorkComponent';
 // import Home from './HomeComponent';
@@ -21,7 +22,7 @@ class Main extends Component {
         return (
             <div>
                 <Header />
-                {/* <MainGraphic hero={this.state.hero}/> */}
+                <Graphic hero={this.state.hero}/>
                 <Work examples={this.state.examples} />
                 <Footer />
             </div>
