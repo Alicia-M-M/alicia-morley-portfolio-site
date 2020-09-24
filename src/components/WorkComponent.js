@@ -1,18 +1,23 @@
 import React from 'react';
-import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
+import { Card, CardImg, CardImgOverlay, CardTitle, Button } from 'reactstrap';
 
 function RenderWorkCardItem({ example }) {
     return (
-        <Card>
-            <CardImg width="100%" src={example.image} alt={example.name} />
-            <CardImgOverlay>
-                <CardTitle>
-                    <h3 className="text-center">{example.name}</h3>
-                    <h5 className="text-center">{example.description}</h5>
-                </CardTitle>
-            </CardImgOverlay>
-        </Card>
+        <React.Fragment>
+            <Button outline >Info
+        </Button>
+            <Card>
+                <CardImg width="100%" src={example.image} alt={example.name} />
+                <CardImgOverlay>
+                    <CardTitle>
+                        <h3 className="text-center">{example.name}</h3>
+                        <h5 className="text-center">{example.description}</h5>
+                    </CardTitle>
+                </CardImgOverlay>
+            </Card>
+        </React.Fragment>
     )
+
 }
 
 function Work(props) {
@@ -26,7 +31,7 @@ function Work(props) {
     });
 
     return (
-        <div className="container my-5">
+        <div id="work_id" className="container my-5">
             <div classname="row">
                 <div className="col text-center pb-4">
                     <h1>WORK EXAMPLES</h1>

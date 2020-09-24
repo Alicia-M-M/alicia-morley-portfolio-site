@@ -22,8 +22,8 @@ class Header extends Component {
     render() {
         return (
             <Navbar light className="bg-white" sticky="top" expand="md">
-                <div className="container-fluid px-5">
-                    <NavbarBrand className="mr-auto" href="/">ALICIA MORLEY</NavbarBrand>
+                <div id="home_id" className="container-fluid px-5">
+                    <NavbarBrand className="mr-auto" href="/home">ALICIA MORLEY</NavbarBrand>
                     <NavbarToggler onClick={this.toggleNav} />
                     <Collapse isOpen={this.state.isNavOpen} navbar>
                         <Nav navbar className="ml-auto" >
@@ -31,27 +31,31 @@ class Header extends Component {
                                 <NavLink className="nav-link" to="/home">
                                     HOME
                                     </NavLink>
+                                {/* <a href="#home_id">
+                                    HOME</a> */}
                             </NavItem>
                             <NavItem>
-                                <NavLink className="nav-link" to="/directory">
+                                <NavLink className="nav-link" to="/about">
                                     ABOUT
                                     </NavLink>
+
+                                {/* <a href="#about_id">
+                                    ABOUT</a> */}
                             </NavItem>
                             <NavItem>
-                                <NavLink className="nav-link" to="/aboutus">
+                                <NavLink className="nav-link" to="/work">
                                     WORK
-                                    </NavLink>
+                                </NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink className="nav-link" to="/contactus">
                                     CONTACT
-                                    </NavLink>
+                                </NavLink>
                             </NavItem>
                         </Nav>
                     </Collapse>
                 </div>
             </Navbar>
-            // </React.Fragment>
         );
     }
 }
