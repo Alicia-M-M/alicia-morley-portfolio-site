@@ -5,6 +5,7 @@ import About from './AboutComponent';
 import Footer from './FooterComponent';
 // import PopUp from './PopUpComponent';
 import Work from './WorkComponent';
+// import TesterApp from './testerApp';
 import Contact from './ContactComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { EXAMPLES } from '../shared/examples';
@@ -27,8 +28,8 @@ class Main extends Component {
                     <Graphic hero={this.state.hero} />
                     <About />
                     <Work examples={this.state.examples} />
-
                     {/* <PopUp /> */}
+                    {/* <TesterApp /> */}
                 </div>
             );
         };
@@ -42,9 +43,7 @@ class Main extends Component {
                 <Switch>
                     <Route exact path='/home' component={MainPage} />
                     <Route exact path='/about' component={MainPage} />
-                    <Route exact path='/work' component={MainPage} render={() => {
-                        document.getElementById("work_id").scrollIntoView();
-                    }} />
+                    <Route exact path='/work' component={MainPage} />
                     <Route exact path='/contactus' component={Contact} />
                     <Redirect to='/home' />
                 </Switch>
@@ -55,8 +54,4 @@ class Main extends Component {
     }
 }
 
-
-// ender={function () {
-//     document.getElementById("work_id").scrollIntoView();
-// }}
 export default Main;

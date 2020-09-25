@@ -1,14 +1,18 @@
 import React from 'react';
 import { Card, CardImg, CardImgOverlay, CardTitle, Button } from 'reactstrap';
+import "./styley.css";
+import Modal from "./Modal";
+import useModal from "./useModal";
 
 function RenderWorkCardItem({ example }) {
+    const { isShowing, toggle } = useModal();
     return (
         <React.Fragment>
-            <Button outline >Info
-        </Button>
             <Card>
                 <CardImg width="100%" src={example.image} alt={example.name} />
                 <CardImgOverlay>
+                    <Button className="button-default" onClick={toggle}>Show Modal</Button>
+                    <Modal isShowing={isShowing} hide={toggle} />
                     <CardTitle>
                         <h3 className="text-center">{example.name}</h3>
                         <h5 className="text-center">{example.description}</h5>
@@ -17,7 +21,6 @@ function RenderWorkCardItem({ example }) {
             </Card>
         </React.Fragment>
     )
-
 }
 
 function Work(props) {
@@ -31,7 +34,7 @@ function Work(props) {
     });
 
     return (
-        <div id="work_id" className="container my-5">
+        <div className="work_id container my-5">
             <div classname="row">
                 <div className="col text-center pb-4">
                     <h1>WORK EXAMPLES</h1>
@@ -45,6 +48,36 @@ function Work(props) {
     );
 }
 
+// export default Work;
 
+
+// function Work(props) {
+//     const [show, setShow] = useState(false);
+
+//     const handleClose = () => setShow(false);
+//     const handleShow = () => setShow(true);
+//     return (
+//         <React.Fragment>
+//             <h1>WORK EXAMPLES</h1>
+//             {props.examples.map(example =>
+//                 <div key={example.id}>
+//                     <h2>{example.name}</h2>
+//                     <Button variant="primary" onClick={handleShow}>
+//                         Launch </Button>
+//                     <Modal show={show} onHide={handleClose}>
+//                         <ModalHeader closeButton>
+//                         </ModalHeader>
+//                         <ModalBody>Woohoo, you're reading this text in a modal!</ModalBody>
+//                         <ModalFooter>
+//                             <Button variant="secondary" onClick={handleClose}>
+//                                 Close</Button>
+//                         </ModalFooter>
+//                     </Modal>
+//                 </div>
+//             )}
+//         </React.Fragment>
+
+//     );
+// }
 
 export default Work;

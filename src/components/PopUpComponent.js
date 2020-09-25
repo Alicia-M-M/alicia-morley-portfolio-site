@@ -20,10 +20,11 @@ class PopUp extends Component {
         });
     }
 
+
     render() {
         return (
             <React.Fragment>
-                <Button outline onClick={this.toggleModal}>Login
+                <Button outline onClick={this.props.toggleModal}>Login
         </Button>
                 <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
                     <ModalHeader toggle={this.toggleModal}>Login</ModalHeader>
