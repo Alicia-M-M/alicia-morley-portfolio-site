@@ -4,8 +4,10 @@ import Graphic from './GraphicComponent';
 import About from './AboutComponent';
 import Footer from './FooterComponent';
 // import PopUp from './PopUpComponent';
+// import PopOut from './Modal';
 import Work from './WorkComponent';
 // import TesterApp from './testerApp';
+// import Modal from './Modal';
 import Contact from './ContactComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { EXAMPLES } from '../shared/examples';
@@ -28,8 +30,10 @@ class Main extends Component {
                     <Graphic hero={this.state.hero} />
                     <About />
                     <Work examples={this.state.examples} />
+                    {/* <Modal examples={this.state.examples} /> */}
                     {/* <PopUp /> */}
                     {/* <TesterApp /> */}
+                    {/* <PopOut examples={this.state.examples}/> */}
                 </div>
             );
         };
