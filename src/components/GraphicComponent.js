@@ -1,7 +1,6 @@
 import React from 'react';
 
 function Graphic(props) {
-
     const graphic = props.hero.map(info => {
         return (
             <div key={info.id} className="col-12">
@@ -21,7 +20,6 @@ function Graphic(props) {
 };
 
 function RenderHeroGraphicItem({ info }) {
-
     return (
         <div className="container hero-graphic-container">
             <div className="row hero-graphic-photo">

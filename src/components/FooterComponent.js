@@ -13,19 +13,19 @@ function Footer() {
 
     return (
         <footer className="site-footer d-flex align-items-center">
-            <div className="container text-center ">
+            <div className="container text-center">
                 <div className="row">
-                    <div className="col-2 mx-auto d-flex">
-                        <div className="col-6 px-1">
+                    <div className="col-lg-3 col-md-4 mx-auto d-flex social-media-wrap-footer ">
+                        <div className="col-6 px-0">
                             {github}
                         </div>
-                        <div className="col-6 px-1">
+                        <div className="col-6 px-0">
                             {linkedin}
                         </div>
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-4 mx-auto pt-3">
+                    <div className="col-md-4 col-sm-6 mx-auto pt-3">
                         <h4>{copyright}{" "}2020 ALICIA MORLEY</h4>
                     </div>
                 </div>

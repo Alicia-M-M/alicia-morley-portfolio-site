@@ -8,7 +8,7 @@ export const EXAMPLES = [
         // links:
     },
     {
-        id: 0,
+        id: 1,
         name: "PROJECT 2",
         software: "BOOTSTRAP",
         description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. ",
@@ -16,7 +16,7 @@ export const EXAMPLES = [
         // links:
     },
     {
-        id: 0,
+        id: 2,
         name: "PROJECT 3",
         software: "REACT",
         description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. ",
@@ -24,7 +24,7 @@ export const EXAMPLES = [
         // links:
     },
     {
-        id: 0,
+        id: 3,
         name: "PROJECT 4",
         software: "BOOTSTRAP",
         description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. ",

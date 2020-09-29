@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import Header from './HeaderComponent';
 import Graphic from './GraphicComponent';
-import About from './AboutComponent';
+// import About from './AboutComponent';
 import Footer from './FooterComponent';
-// import PopUp from './PopUpComponent';
-// import PopOut from './Modal';
 import Work from './WorkComponent';
-import TesterApp from './testerApp';
-import Modal from './Modal';
+import WorkInfo from './WorkInfoComponent';
 import Contact from './ContactComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { EXAMPLES } from '../shared/examples';
@@ -24,30 +21,23 @@ class Main extends Component {
 
     render() {
 
-        const MainPage = () => {
+        const WorkMatchClick = ({ match }) => {
             return (
-                <div>
-                    <Graphic hero={this.state.hero} />
-                    <About />
-                    <Work examples={this.state.examples} />
-                    <Modal examples={this.state.examples} />
-                    {/* <PopUp /> */}
-                    {/* <TesterApp examples={this.state.examples} /> */}
-                    {/* <PopOut examples={this.state.examples}/> */}
-                </div>
+                <WorkInfo
+                    example={this.state.examples.filter(example => example.id === +match.params.exampleId)[0]}
+                />
             );
-        };
+        }
 
         return (
             <div>
                 <Header />
-                {/* <Graphic hero={this.state.hero} />
-                <Work examples={this.state.examples} />
-                <PopUp /> */}
                 <Switch>
-                    <Route exact path='/home' component={MainPage} />
-                    <Route exact path='/about' component={MainPage} />
-                    <Route exact path='/work' component={MainPage} />
+                    {/* <Route exact path='/home' component={MainPage} />
+                    <Route exact path='/about' component={MainPage} /> */}
+                    <Route exact path='/home' render={ () => <Graphic hero={this.state.hero} />} />
+                    <Route exact path='/work' render={ () => <Work examples={this.state.examples} />} />
+                    <Route path='/work/:exampleId' component={WorkMatchClick} />
                     <Route exact path='/contactus' component={Contact} />
                     <Redirect to='/home' />
                 </Switch>
