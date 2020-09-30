@@ -88,3 +88,9 @@ h4{
   
 }
 
+@media (min-width: 768px){
+  /* workInfoComponent */
+  .workInfoCard {
+    flex-direction: row;
+  }
+}

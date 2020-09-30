@@ -21,7 +21,7 @@ function Graphic(props) {
 
 function RenderHeroGraphicItem({ info }) {
     return (
-        <div className="container hero-graphic-container">
+        <div className="container hero-graphic-container pb-5">
             <div className="row hero-graphic-photo">
                 <img width="100%" src={info.image} alt={info.title} />
             </div>

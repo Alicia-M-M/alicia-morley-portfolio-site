@@ -40,11 +40,10 @@ class Contact extends Component {
         return (
             <div id="contact_id" className="container">
                 <div className="col-12">
-                    <h2>Send us your Feedback</h2>
-                    <hr />
+                    <ContactInfo />
                 </div>
-                <div className="col-md-10">
-                    <Form onSubmit={this.handleSubmit}>
+                <div className="col-md-10 mx-auto">
+                    <Form onSubmit={this.handleSubmit} >
                         <FormGroup row>
                             <Label htmlFor="firstName" md={2}>First Name</Label>
                             <Col md={10}>
@@ -82,7 +81,7 @@ class Contact extends Component {
                             </Col>
                         </FormGroup>
                         <FormGroup row>
-                            <Label htmlFor="feedback" md={2}>Your Feedback</Label>
+                            <Label htmlFor="feedback" md={2}>Message</Label>
                             <Col md={10}>
                                 <Input type="textarea" id="feedback" name="feedback"
                                     rows="12"
@@ -91,10 +90,9 @@ class Contact extends Component {
                             </Col>
                         </FormGroup>
                         <FormGroup row>
-                            <Col md={{ size: 10, offset: 2 }}>
-                                <Button type="submit" color="primary">
-                                    Send Feedback
-                                    </Button>
+                            <Col className="text-center" md={{ size: 10, offset: 2 }}>
+                                <Button type="submit">SUBMIT</Button>
+
                             </Col>
                         </FormGroup>
                     </Form>
@@ -103,6 +101,23 @@ class Contact extends Component {
 
         );
     }
+};
+
+function ContactInfo(props) {
+
+    return (
+        <div id="about_id" className="container my-5">
+            <div classname="row">
+                <div className="col text-center pb-4">
+                    <h1>CONTACT ME</h1>
+                    <p>Cemail@gmail.com
+                    <br></br>or send me a message:</p>
+                </div>
+            </div>
+            <div className="row">
+            </div>
+        </div>
+    );
 }
 
 export default Contact;

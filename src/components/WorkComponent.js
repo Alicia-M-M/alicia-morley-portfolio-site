@@ -4,19 +4,17 @@ import { Link } from 'react-router-dom';
 
 function RenderWorkCardItem({ example }) {
     return (
-        <React.Fragment>
-            <Card>
+        <Card>
             <Link to={`/work/${example.id}`}>
-                <CardImg width="100%" src={example.image} alt={example.name} />
+                <CardImg src={example.image} alt={example.name} />
                 <CardImgOverlay className="d-flex align-items-center">
                     <CardBody>
                         <h3 className="text-center">{example.name}</h3><hr className="line-width"></hr>
                         <h5 className="text-center">{example.software}</h5>
                     </CardBody>
                 </CardImgOverlay>
-                </Link>
-            </Card>
-        </React.Fragment>
+            </Link>
+        </Card>
     )
 }
 
@@ -31,7 +29,7 @@ function Work(props) {
 
     return (
         <div className="work_id container my-5">
-            <div classname="row">
+            <div className="row">
                 <div className="col text-center pb-4">
                     <h1>WORK EXAMPLES</h1>
                     <p>Below are my most recent examples of work:</p>
