@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { ConfigureStore } from './redux/configureStore';
 import './App.css';
+import ScrollToTop from "./components/ScrollToTop";
 
 const store = ConfigureStore();
 
@@ -12,6 +13,7 @@ class App extends Component {
     return (
       <Provider store={store}>
         <BrowserRouter>
+          <ScrollToTop />
           <div className="App">
             <Main />
           </div>

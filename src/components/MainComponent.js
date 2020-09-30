@@ -42,6 +42,7 @@ class Main extends Component {
                 <Header />
                 <Switch>
                     {/* {/* <Route exact path='/home' component={MainPage} /> */}
+                    
                     <Route exact path='/home' component={MainPage} />
                     <Route exact path='/about' component={MainPage} />
 
