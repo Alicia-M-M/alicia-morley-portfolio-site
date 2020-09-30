@@ -6,25 +6,24 @@ import Footer from './FooterComponent';
 import Work from './WorkComponent';
 import WorkInfo from './WorkInfoComponent';
 import Contact from './ContactComponent';
-import { Switch, Route, Redirect } from 'react-router-dom';
-import { EXAMPLES } from '../shared/examples';
-import { HERO } from '../shared/hero';
+import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+const mapStateToProps = state => {
+    return {
+        examples: state.examples,
+        hero: state.hero
+    };
+};
 
 class Main extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            examples: EXAMPLES,
-            hero: HERO,
-        };
-    }
 
     render() {
 
         const WorkMatchClick = ({ match }) => {
             return (
                 <WorkInfo
-                    example={this.state.examples.filter(examples => examples.id === +match.params.exampleId)[0]}
+                    example={this.props.examples.filter(examples => examples.id === +match.params.exampleId)[0]}
                 />
             );
         }
@@ -32,7 +31,7 @@ class Main extends Component {
         const MainPage = () => {
             return (
                 <div>
-                    <Graphic hero={this.state.hero} />
+                    <Graphic hero={this.props.hero} />
                     <About />
                 </div>
             );
@@ -43,11 +42,11 @@ class Main extends Component {
                 <Header />
                 <Switch>
                     {/* {/* <Route exact path='/home' component={MainPage} /> */}
-                    <Route exact path='/home' component={MainPage} /> 
-                    <Route exact path='/about' component={MainPage} /> 
-                    
+                    <Route exact path='/home' component={MainPage} />
+                    <Route exact path='/about' component={MainPage} />
+
                     {/* <Route exact path='/home' render={ () => <Graphic hero={this.state.hero} />} /> */}
-                    <Route exact path='/work' render={ () => <Work examples={this.state.examples} />} />
+                    <Route exact path='/work' render={() => <Work examples={this.props.examples} />} />
                     <Route path='/work/:exampleId' component={WorkMatchClick} />
                     <Route exact path='/contactus' component={Contact} />
                     <Redirect to='/home' />
@@ -59,4 +58,4 @@ class Main extends Component {
     }
 }
 
-export default Main;
+export default withRouter(connect(mapStateToProps)(Main));

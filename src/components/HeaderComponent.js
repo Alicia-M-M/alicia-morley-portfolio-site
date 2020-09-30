@@ -22,7 +22,7 @@ class Header extends Component {
     render() {
         return (
             <Navbar light className="bg-white" sticky="top" expand="md">
-                <div id="home_id" className="container-fluid px-5">
+                <div className="container-fluid px-5">
                     <NavbarBrand className="mr-auto" href="/home">ALICIA MORLEY</NavbarBrand>
                     <NavbarToggler onClick={this.toggleNav} />
                     <Collapse isOpen={this.state.isNavOpen} navbar>
