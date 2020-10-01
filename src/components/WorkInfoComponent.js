@@ -1,5 +1,5 @@
 import React from 'react';
-import { CardTitle, CardText, Card, CardBody, CardImg, CardFooter, CardSubtitle, Breadcrumb, BreadcrumbItem, Button } from 'reactstrap';
+import { CardTitle, CardText, Card, CardBody, CardImg, CardFooter, CardSubtitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -38,9 +38,11 @@ function WorkInfo(props) {
         return (
             <div className="container-fluid">
                 <div className="row">
-                    <div className="col-10 mx-auto">
-                        <Breadcrumb>
-                            <BreadcrumbItem><Link to="/work"><Button className="back-arrow px-2 d-flex align-items-center">{backArrow} <span className="pr-3"></span> BACK</Button></Link>
+                    <div className="col-lg-10 col-md-12 mx-auto">
+                        <Breadcrumb >
+                            <BreadcrumbItem><Link className="back-arrow d-flex align-items-center" to="/work"><div>{backArrow}</div><div className="pl-3">
+                                BACK
+                            </div></Link>
                             </BreadcrumbItem>
                         </Breadcrumb>
                     </div>
@@ -58,3 +60,4 @@ function WorkInfo(props) {
 }
 
 export default WorkInfo;
+

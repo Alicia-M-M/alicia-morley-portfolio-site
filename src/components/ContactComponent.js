@@ -57,8 +57,8 @@ class Contact extends Component {
                 <div className="col-md-10 mx-auto">
                     <LocalForm onSubmit={values => this.handleSubmit(values)} >
                         <Row className="form-group">
-                            <Label htmlFor="firstName" md={2}>First Name</Label>
-                            <Col md={10}>
+                            <Col md={10} className="mx-auto">
+                                <Label htmlFor="firstName" >FIRST NAME</Label>
                                 <Control.text model=".firstName" id="firstName" name="firstName"
                                     placeholder="First Name"
                                     className="form-control"
@@ -82,8 +82,8 @@ class Contact extends Component {
                             </Col>
                         </Row>
                         <Row className="form-group">
-                            <Label htmlFor="lastName" md={2}>Last Name</Label>
-                            <Col md={10}>
+                            <Col md={10} className="mx-auto">
+                                <Label htmlFor="lastName">LAST NAME</Label>
                                 <Control.text model=".lastName" id="lastName" name="lastName"
                                     placeholder="Last Name"
                                     className="form-control"
@@ -107,8 +107,8 @@ class Contact extends Component {
                             </Col>
                         </Row>
                         <Row className="form-group">
-                            <Label htmlFor="phoneNum" md={2}>Phone</Label>
-                            <Col md={10}>
+                            <Col md={10} className="mx-auto">
+                                <Label htmlFor="phoneNum" >PHONE</Label>
                                 <Control.text model=".phoneNum" id="phoneNum" name="phoneNum"
                                     placeholder="Phone number"
                                     className="form-control"
@@ -134,8 +134,8 @@ class Contact extends Component {
                             </Col>
                         </Row>
                         <Row className="form-group">
-                            <Label htmlfor="email" md={2}>Email</Label>
-                            <Col md={10}>
+                            <Col md={10} className="mx-auto">
+                                <Label htmlfor="email">EMAIL</Label>
                                 <Control.text model=".email" id="email" name="email"
                                     placeholder="Email"
                                     className="form-control"
@@ -157,8 +157,8 @@ class Contact extends Component {
                             </Col>
                         </Row>
                         <Row className="form-group">
-                            <Label htmlFor="message" md={2}>Message</Label>
-                            <Col md={10}>
+                            <Col md={10} className="mx-auto">
+                                <Label htmlFor="message" >MESSAGE</Label>
                                 <Control.textarea model=".message" id="message" name="message"
                                     className="form-control"
                                     rows="12"
@@ -166,7 +166,7 @@ class Contact extends Component {
                             </Col>
                         </Row>
                         <Row className="form-group">
-                            <Col className="text-center" md={{ size: 10, offset: 2 }}>
+                            <Col className="text-center mx-auto" md={{ size: 10, offset: 2 }}>
                                 <Button className="button-styling-green" type="submit">SUBMIT</Button>
                             </Col>
                         </Row>
@@ -184,7 +184,7 @@ function ContactInfo(props) {
         <div id="about_id" className="container my-5">
             <div classname="row">
                 <div className="col text-center pb-4">
-                    <h1>CONTACT ME</h1>
+                    <h2>CONTACT ME</h2>
                     <p>gmail@gmail.com
                     <br></br>or send me a message:</p>
                 </div>

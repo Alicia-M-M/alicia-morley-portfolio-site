@@ -1,25 +1,42 @@
 body {
   font-family:"Merriweather Sans";
   font-weight:300;
+  margin:0px;
+  padding:0px;
 }
 
-h1,h3{
+h1,h3,h2{
   font-family:"Catamaran";
   font-weight:900;
+  margin:0px;
 }
 
-h2 {
+h4 {
   font-family:"Catamaran";
   font-weight:700;
+  margin:0px;
+}
+
+h1{
+  font-size: 7rem;
+}
+
+h2{
+  font-size:2.5rem;
+}
+h3{
+  font-size:1.3rem;
 }
 
 h4{
-  font-family:"Catamaran";
-  font-weight:700;
   font-size: 1rem;
 }
 
-/* buttons */
+h5{
+  font-size:1rem;
+}
+
+/* GeneralButtons */
 
 .button-styling-green{
   color:#FFFFFF;
@@ -30,7 +47,22 @@ h4{
   border-color:transparent;
 }
 
-/* navbar */
+/* HeaderComponent */
+
+.navbar-light .navbar-nav .nav-link{
+  color:black;
+}
+
+.navbar-light .navbar-toggler{
+  border:none;
+}
+.navbar-light .navbar-toggler-icon{
+  border:none;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+  color:grey;
+}
 
 .nav-link{
   font-family:"Catamaran";
@@ -46,22 +78,51 @@ h4{
   color:black;
 }
 
-/* hero-graphic */
+/* GraphicComponent */
 
 .overlayed-text{
   position:absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 .overlayed-text h4{
-  font-size: 0.1rem;
+  font-size: 1rem;
 }
 .hero-graphic-photo{
+  max-width:1893px;
   position: relative;
+  color:black;
 } 
 
-/* footer */
+.graphic-intro-text{
+  max-width:200px;
+}
+
+/* below-ovelay-works-but-do-not-use */
+/* .colour-overlay:before {
+  background-color:#FDEE67;
+  position: absolute;
+  opacity: 0.8;
+  border-radius:0px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  content: ' ';
+} */
+
+.colour-overlay{
+  position:relative;
+}
+
+
+.hero-graphic-photo img{
+  object-fit:cover;
+  min-height:300px;
+}
+
+/* FooterComponent */
 
 .site-footer {
   color:#FFFFFF;
@@ -71,23 +132,21 @@ h4{
   line-height: 60px;
 }
 
-/* work-component */
+/* WorkComponent */
+.work-project-info, .work-project-software{
+  color:black;
+  margin-bottom:0px;
+}
 
 .back-arrow{
   background:none;
   border:none;
   color:black;
   font-weight:900;
+  transition: all 0.3s ease-in-out;
 }
 
 .back-arrow:hover{
-  color:grey;
-  background:none;
-  border:none;
-  text-decoration:none;
-}
-
-.back-arrow:active{
   color:grey;
   background:none;
   border:none;
@@ -105,32 +164,45 @@ h4{
 }
 
 .colour-overlay-container-green{
+  position:relative;
+}
+
+.colour-overlay-container-green:after{
   background-color: #779A98;
   color:black;
   opacity: 0.8;
-  border-radius:0px;
-}
-
-.colour-overlay-container-green:hover {
-  opacity: 0;
+  position:absolute;
   transition:all 0.9s ease-in-out;
+  border-radius:0px;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   content: ' ';
+}
+
+.colour-overlay-container-green:hover:after{
+  opacity: 0;
+}
+
+.work-overlayed-text{
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .colour-overlay-container-yellow{
+  position:relative;
+}
+
+.colour-overlay-container-yellow:after{
   background-color:#FDEE67;
   color:black;
   opacity: 0.8;
-  border-radius:0px;
-}
-
-.colour-overlay-container-yellow:hover {
-  opacity: 0;
+  position:absolute;
   transition:all 0.9s ease-in-out;
+  border-radius:0px;
   left: 0;
   right: 0;
   top: 0;
@@ -138,11 +210,22 @@ h4{
   content: ' ';
 }
 
-/* workInfoComponent */
+.colour-overlay-container-yellow:hover:after{
+  opacity: 0;
+}
+
+.work-overlayed-text{
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .card-work-info-photo {
   border-radius:0px;
 }
+
+/* WorkInfoComponent */
 
 .card-title{
   font-weight: 700;
@@ -182,42 +265,82 @@ h4{
   color: grey;
 }
 
+/* ContactComponent */
+  .form-control{
+    font-size:0.8rem;
+    border-radius:0px;
+    font-weight:300;
+  }
+
+  .form-group label{
+    font-family:"Catamaran";
+    font-weight:700;
+    font-size: 1.5rem;
+  }
+
+  .form-group{
+    font-size: 0.8rem;
+  }
+
 /* media-queries */
 
-@media (min-width: 992px) {
+@media (min-width: 576px){
 
-  .navbar-brand{
-    font-size: 3rem;
-  }
-
-  h4{
-    font-size:1.5rem;
-  }
-
-  .overlayed-text h4{
-    font-size: 1rem;
-  }
-
-  
 }
 
 @media (min-width: 768px){
-  /* workInfoComponent */
+  /* WorkInfoComponent */
   .workInfoCard {
     flex-direction: row;
   }
 
-  .overlayed-text h1{
-    font-size: 4rem;
+}
+
+@media (min-width: 992px) {
+/* HeaderComponent */
+  .navbar-brand{
+    font-size: 3rem;
   }
+
+  /* OverallStyling */
+  h4{
+    font-size:1.5rem;
+  }
+
+  h3{
+    font-size:1.7rem;
+  }
+  
+  h5{
+    font-size:1.2rem;
+  }
+
+  /* GraphicComponent */
+  .overlayed-text h4{
+    font-size: 1rem;
+  }
+    /* WorkInfoComponent */
+  .card-text {
+    font-size:0.9rem;
+  }
+
+  .graphic-intro-text{
+    max-width:250px;
+  }
+
+  /* GraphicComponent */
+  h1{
+    font-size: 10rem;
+  }
+
+  .overlayed-text h4{
+    font-size: 1.1rem;
+  }
+
 }
 
-@media (min-width: 992px){
-.card-text {
-  font-size:0.9rem;
-}
-
-.overlayed-text h1{
-  font-size: 7rem;
-}
+@media (min-width: 1200px) { 
+  h1{
+    font-size: 12rem;
+  }
 }

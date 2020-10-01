@@ -7,7 +7,7 @@ function About(props) {
         <div id="about_id" className="container my-5">
             <div classname="row">
                 <div className="col-8 text-center pb-4 mx-auto">
-                    <h1>ABOUT ME</h1>
+                    <h2>ABOUT ME</h2>
                     <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. </p>
                 </div>
             </div>
