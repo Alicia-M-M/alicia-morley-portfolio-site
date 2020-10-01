@@ -19,11 +19,18 @@ h4{
   font-size: 1rem;
 }
 
-/* navbar */
+/* buttons */
 
-/* .navbar{
-    height:150px;
-} */
+.button-styling-green{
+  color:#FFFFFF;
+  background-color: #779A98;
+  border-radius:0px;
+  font-family:"Catamaran";
+  font-weight:900;
+  border-color:transparent;
+}
+
+/* navbar */
 
 .nav-link{
   font-family:"Catamaran";
@@ -66,7 +73,113 @@ h4{
 
 /* work-component */
 
-.cardbody, .line-width {
+.back-arrow{
+  background:none;
+  border:none;
+  color:black;
+  font-weight:900;
+}
+
+.back-arrow:hover{
+  color:grey;
+  background:none;
+  border:none;
+  text-decoration:none;
+}
+
+.back-arrow:active{
+  color:grey;
+  background:none;
+  border:none;
+  text-decoration:none;
+}
+
+.line-width{
+  margin:0px 0px;
+  padding:0px 0px;
+  max-width:220px;
+  border:2px solid rgb(0,0,0);
+}
+.card{
+  border-radius:0px;
+}
+
+.colour-overlay-container-green{
+  background-color: #779A98;
+  color:black;
+  opacity: 0.8;
+  border-radius:0px;
+}
+
+.colour-overlay-container-green:hover {
+  opacity: 0;
+  transition:all 0.9s ease-in-out;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  content: ' ';
+}
+
+.colour-overlay-container-yellow{
+  background-color:#FDEE67;
+  color:black;
+  opacity: 0.8;
+  border-radius:0px;
+}
+
+.colour-overlay-container-yellow:hover {
+  opacity: 0;
+  transition:all 0.9s ease-in-out;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  content: ' ';
+}
+
+/* workInfoComponent */
+
+.card-work-info-photo {
+  border-radius:0px;
+}
+
+.card-title{
+  font-weight: 700;
+  font-size: 1.9rem;
+  font-family:"Catamaran";
+}
+
+.card-subtitle{
+  font-size: 1.1rem;
+}
+.card-footer, .card-title, .breadcrumb, .card-subtitle{
+  background-color: transparent;
+  border-bottom:0px;
+  border-top:0px;
+  padding-top:0px;
+  padding-bottom:0px;
+  margin-bottom:0px;
+}
+
+.workInfoCard hr{
+  margin:0px 0px;
+  padding:0px 0px;
+  max-width:220px;
+  border:2px solid rgb(0,0,0);
+}
+
+.card-text{
+  font-size:0.8rem;
+}
+
+.card-footer a{
+  color: #779A98;
+}
+
+.card-footer a:hover{
+  transition: all 0.3s ease-in-out;
+  color: grey;
 }
 
 /* media-queries */
@@ -93,4 +206,18 @@ h4{
   .workInfoCard {
     flex-direction: row;
   }
+
+  .overlayed-text h1{
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 992px){
+.card-text {
+  font-size:0.9rem;
+}
+
+.overlayed-text h1{
+  font-size: 7rem;
+}
 }

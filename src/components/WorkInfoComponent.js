@@ -1,28 +1,32 @@
 import React from 'react';
-import { CardHeader, CardText, Card, CardBody, CardImg, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import { CardTitle, CardText, Card, CardBody, CardImg, CardFooter, CardSubtitle, Breadcrumb, BreadcrumbItem, Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faFigma } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faCaretLeft } from '@fortawesome/free-solid-svg-icons';
 
-const github = <FontAwesomeIcon icon={faGithub} size="4x" />
-const figma = <FontAwesomeIcon icon={faFigma} size="4x" />
-const linkedin = <FontAwesomeIcon icon={faLinkedin} size="4x" />
-
+const github = <FontAwesomeIcon icon={faGithub} size="3x" />
+const figma = <FontAwesomeIcon icon={faFigma} size="3x" />
+const linkedin = <FontAwesomeIcon icon={faLinkedin} size="3x" />
+const backArrow = <FontAwesomeIcon icon={faCaretLeft} size="3x" />
 
 function RenderInfoCard({ example }) {
     return (
-        <div className="col-12" >
-            <Card className="workInfoCard">
-                <CardImg className="col-md-6" src={example.image} alt={example.name} />
-                <CardBody className="col-md-6" >
-                    <CardHeader>{example.name}{example.software}</CardHeader>
+        <div className="col-lg-10 col-md-12 px-5 mx-auto" >
+            <Card className="workInfoCard row text-center">
+                <CardImg width="100%" className="card-work-info-photo col-md-6 px-0" src={example.image} alt={example.name} />
+                <CardBody className="col-md-6 align-self-center px-2" >
+                    <CardTitle>{example.name}</CardTitle><hr className="mx-auto"></hr>
+                    <CardSubtitle className="py-3">{example.software}</CardSubtitle>
                     <CardText>{example.description}
-                        <a href={example.github}>{github}</a>
-                        <a href={example.figma}>{figma}</a>
-                        <a href={example.linkedIn}>{linkedin}</a>
                     </CardText>
+                    <CardFooter>
+                        <a className="px-2" href={example.github}>{github}</a>
+                        <a className="px-2" href={example.figma}>{figma}</a>
+                        <a className="px-2" href={example.linkedIn}>{linkedin}</a>
+                    </CardFooter>
                 </CardBody>
             </Card>
         </div>
@@ -32,19 +36,17 @@ function RenderInfoCard({ example }) {
 function WorkInfo(props) {
     if (props.example) {
         return (
-            <div className="container">
+            <div className="container-fluid">
                 <div className="row">
-                    <div className="col-4 mx-auto">
+                    <div className="col-10 mx-auto">
                         <Breadcrumb>
-                            <BreadcrumbItem className="mx-auto" ><Link to="/work">RETURN TO PREVIOUS PAGE</Link>
-                                {/* <BreadcrumbItem active>{props.example.name}
-                                </BreadcrumbItem> */}
+                            <BreadcrumbItem><Link to="/work"><Button className="back-arrow px-2 d-flex align-items-center">{backArrow} <span className="pr-3"></span> BACK</Button></Link>
                             </BreadcrumbItem>
                         </Breadcrumb>
                     </div>
                 </div>
 
-                <div className="row py-5">
+                <div className="row pb-5">
                     <RenderInfoCard example={props.example} />
                 </div>
 

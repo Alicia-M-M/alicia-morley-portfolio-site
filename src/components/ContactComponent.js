@@ -167,7 +167,7 @@ class Contact extends Component {
                         </Row>
                         <Row className="form-group">
                             <Col className="text-center" md={{ size: 10, offset: 2 }}>
-                                <Button type="submit">SUBMIT</Button>
+                                <Button className="button-styling-green" type="submit">SUBMIT</Button>
                             </Col>
                         </Row>
                     </LocalForm>
@@ -185,7 +185,7 @@ function ContactInfo(props) {
             <div classname="row">
                 <div className="col text-center pb-4">
                     <h1>CONTACT ME</h1>
-                    <p>Cemail@gmail.com
+                    <p>gmail@gmail.com
                     <br></br>or send me a message:</p>
                 </div>
             </div>

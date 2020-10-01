@@ -41,12 +41,8 @@ class Main extends Component {
             <div>
                 <Header />
                 <Switch>
-                    {/* {/* <Route exact path='/home' component={MainPage} /> */}
-                    
                     <Route exact path='/home' component={MainPage} />
                     <Route exact path='/about' component={MainPage} />
-
-                    {/* <Route exact path='/home' render={ () => <Graphic hero={this.state.hero} />} /> */}
                     <Route exact path='/work' render={() => <Work examples={this.props.examples} />} />
                     <Route path='/work/:exampleId' component={WorkMatchClick} />
                     <Route exact path='/contactus' component={Contact} />
