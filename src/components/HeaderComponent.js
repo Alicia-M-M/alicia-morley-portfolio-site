@@ -34,14 +34,14 @@ class Header extends Component {
                                 {/* <a href="#home_id">
                                     HOME</a> */}
                             </NavItem>
-                            <NavItem>
+                            {/* <NavItem>
                                 <NavLink className="nav-link" to="/about">
                                     ABOUT
-                                    </NavLink>
+                                    </NavLink> */}
 
                                 {/* <a href="#about_id">
                                     ABOUT</a> */}
-                            </NavItem>
+                            {/* </NavItem> */}
                             <NavItem>
                                 <NavLink className="nav-link" to="/work">
                                     WORK

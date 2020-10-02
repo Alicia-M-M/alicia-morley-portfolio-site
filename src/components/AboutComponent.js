@@ -4,7 +4,7 @@ import { Button } from 'reactstrap';
 function About(props) {
 
     return (
-        <div id="about_id" className="container my-5">
+        <div id='about_id' className="container my-5">
             <div classname="row">
                 <div className="col-8 text-center pb-4 mx-auto">
                     <h2>ABOUT ME</h2>
@@ -20,5 +20,4 @@ function About(props) {
     );
 }
 
-
-export default About;
+    export default About;

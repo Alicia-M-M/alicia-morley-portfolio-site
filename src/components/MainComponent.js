@@ -8,6 +8,7 @@ import WorkInfo from './WorkInfoComponent';
 import Contact from './ContactComponent';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 const mapStateToProps = state => {
     return {
@@ -37,17 +38,22 @@ class Main extends Component {
             );
         };
 
+
         return (
             <div>
                 <Header />
-                <Switch>
-                    <Route exact path='/home' component={MainPage} />
-                    <Route exact path='/about' component={MainPage} />
-                    <Route exact path='/work' render={() => <Work examples={this.props.examples} />} />
-                    <Route path='/work/:exampleId' component={WorkMatchClick} />
-                    <Route exact path='/contactus' component={Contact} />
-                    <Redirect to='/home' />
-                </Switch>
+                <TransitionGroup>
+                    <CSSTransition key={this.props.location.key} classNames="page" timeout={300}>
+                        <Switch>
+                            <Route exact path='/home' component={MainPage} />
+                            {/* <Route exact path='/about' component={MainPage} /> */}
+                            <Route exact path='/work' render={() => <Work examples={this.props.examples} />} />
+                            <Route path='/work/:exampleId' component={WorkMatchClick} />
+                            <Route exact path='/contactus' component={Contact} />
+                            <Redirect to='/home' />
+                        </Switch>
+                    </CSSTransition>
+                </TransitionGroup>
                 <Footer />
             </div>
 

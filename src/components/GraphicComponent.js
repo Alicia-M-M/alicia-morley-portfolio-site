@@ -35,10 +35,4 @@ function RenderHeroGraphicItem({ info }) {
 }
 
 
-
-
-
-
-
-
 export default Graphic;
