@@ -27,7 +27,7 @@ class Header extends Component {
                     <NavbarToggler onClick={this.toggleNav} />
                     <Collapse isOpen={this.state.isNavOpen} navbar>
                         <Nav navbar className="ml-auto" >
-                            <NavItem>
+                            <NavItem className="px-2">
                                 <NavLink className="nav-link" to="/home">
                                     HOME
                                     </NavLink>
@@ -42,12 +42,12 @@ class Header extends Component {
                                 {/* <a href="#about_id">
                                     ABOUT</a> */}
                             {/* </NavItem> */}
-                            <NavItem>
+                            <NavItem className="px-2">
                                 <NavLink className="nav-link" to="/work">
                                     WORK
                                 </NavLink>
                             </NavItem>
-                            <NavItem>
+                            <NavItem className="px-2">
                                 <NavLink className="nav-link" to="/contactus">
                                     CONTACT
                                 </NavLink>

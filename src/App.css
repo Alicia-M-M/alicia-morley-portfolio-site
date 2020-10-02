@@ -49,6 +49,10 @@ h5{
 
 /* HeaderComponent */
 
+.navbar{
+  border-bottom:solid 2px black;
+}
+
 .navbar-light .navbar-nav .nav-link{
   color:black;
 }
@@ -62,12 +66,13 @@ h5{
 
 .navbar-light .navbar-nav .nav-link:hover{
   color:grey;
+  transition:all 0.3s ease-in-out;
 }
 
 .nav-link{
   font-family:"Catamaran";
   font-weight:700;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color:black;
 }
 
@@ -126,15 +131,20 @@ h5{
 
 .site-footer {
   color:#FFFFFF;
-  background-color: #779A98;
+  background: #779A98;
   width: 100%;
   height: 400px;
   line-height: 60px;
 }
 
 /* WorkComponent */
-.work-project-info, .work-project-software{
+.black-info-text{
   color:black;
+  margin-bottom:0px;
+}
+
+.white-info-text{
+  color:white;
   margin-bottom:0px;
 }
 
@@ -153,11 +163,18 @@ h5{
   text-decoration:none;
 }
 
-.line-width{
+.line-width-black{
   margin:0px 0px;
   padding:0px 0px;
   max-width:220px;
   border:2px solid rgb(0,0,0);
+}
+
+.line-width-white{
+  margin:0px 0px;
+  padding:0px 0px;
+  max-width:220px;
+  border:2px solid white;
 }
 .card{
   border-radius:0px;
@@ -168,7 +185,7 @@ h5{
 }
 
 .colour-overlay-container-green:after{
-  background-color: #779A98;
+  background: #779A98;
   color:black;
   opacity: 0.8;
   position:absolute;
@@ -197,7 +214,7 @@ h5{
 }
 
 .colour-overlay-container-yellow:after{
-  background-color:#FDEE67;
+  background: #FDEE67;
   color:black;
   opacity: 0.8;
   position:absolute;
@@ -222,6 +239,7 @@ h5{
 }
 
 .card-work-info-photo {
+  object-fit: cover;
   border-radius:0px;
 }
 
@@ -329,7 +347,7 @@ h5{
 @media (min-width: 992px) {
 /* HeaderComponent */
   .navbar-brand{
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   /* OverallStyling */
@@ -377,5 +395,10 @@ h5{
 @media (min-width: 1200px) { 
   h1{
     font-size: 12rem;
+  }
+
+  .workInfoContainer {
+    padding-top:80px;
+    padding-bottom:100px;
   }
 }

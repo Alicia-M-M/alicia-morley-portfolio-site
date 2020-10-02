@@ -8,7 +8,8 @@ export const EXAMPLES = [
         github: "https://github.com/Alicia-M-M",
         figma: "https://www.figma.com/",
         linkedIn: "https://www.linkedin.com/",
-        color: true
+        color: true,
+        textColor:true
     },
     {
         id: 1,
@@ -19,7 +20,8 @@ export const EXAMPLES = [
         github: "https://github.com/Alicia-M-M",
         figma: "https://www.figma.com/",
         linkedIn: "https://www.linkedin.com/",
-        color: false
+        color: false,
+        textColor:false
     },
     {
         id: 2,
@@ -30,7 +32,8 @@ export const EXAMPLES = [
         github: "https://github.com/Alicia-M-M",
         figma: "https://www.figma.com/",
         linkedIn: "https://www.linkedin.com/",
-        color: false
+        color: false,
+        textColor:false
     },
     {
         id: 3,
@@ -41,7 +44,8 @@ export const EXAMPLES = [
         github: "https://github.com/Alicia-M-M",
         figma: "https://www.figma.com/",
         linkedIn: "https://www.linkedin.com/",
-        color: true
+        color: true,
+        textColor:true
     },
 
 ]

@@ -1,11 +1,17 @@
 import React from 'react';
+import About from './AboutComponent';
 
 function Graphic(props) {
     const graphic = props.hero.map(info => {
         return (
+            <>
             <div key={info.id}>
                 <RenderHeroGraphicItem info={info} />
             </div>
+            <div>
+                <About />
+            </div>
+            </>
         )
     });
 
@@ -33,6 +39,12 @@ function RenderHeroGraphicItem({ info }) {
     )
 
 }
+
+
+
+
+
+
 
 
 export default Graphic;

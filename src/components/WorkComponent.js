@@ -41,8 +41,8 @@ function RenderWorkCardItem({ example }) {
                 </div>
                 <div className="d-flex align-items-center">
                     <div className="work-overlayed-text">
-                        <h3 className="text-center work-project-info">{example.name}</h3><hr className="line-width mx-auto"></hr>
-                        <h5 className="text-center work-project-software pt-1">{example.software}</h5>
+                        <h3 className={`text-center${example.textColor ? ' black-info-text' : ' white-info-text'}`}>{example.name}</h3><hr className={`mx-auto${example.textColor ? ' line-width-black' : ' line-width-white'}`}></hr>
+                        <h5 className={`text-center pt-1${example.textColor ? ' black-info-text' : ' white-info-text'}`}>{example.software}</h5>
                     </div>
                 </div>
             </Link>

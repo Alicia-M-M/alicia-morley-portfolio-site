@@ -36,7 +36,7 @@ function RenderInfoCard({ example }) {
 function WorkInfo(props) {
     if (props.example) {
         return (
-            <div className="container-fluid">
+            <div className="container-fluid workInfoContainer">
                 <div className="row">
                     <div className="col-lg-10 col-md-12 mx-auto">
                         <Breadcrumb >
@@ -51,7 +51,6 @@ function WorkInfo(props) {
                 <div className="row pb-5">
                     <RenderInfoCard example={props.example} />
                 </div>
-
             </div>
         );
     }

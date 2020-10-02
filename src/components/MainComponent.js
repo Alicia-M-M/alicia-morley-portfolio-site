@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './HeaderComponent';
 import Graphic from './GraphicComponent';
-import About from './AboutComponent';
+// import About from './AboutComponent';
 import Footer from './FooterComponent';
 import Work from './WorkComponent';
 import WorkInfo from './WorkInfoComponent';
@@ -29,14 +29,14 @@ class Main extends Component {
             );
         }
 
-        const MainPage = () => {
-            return (
-                <div>
-                    <Graphic hero={this.props.hero} />
-                    <About />
-                </div>
-            );
-        };
+        // const MainPage = () => {
+        //     return (
+        //         <div>
+        //             <Graphic hero={this.props.hero} />
+        //             <About />
+        //         </div>
+        //     );
+        // };
 
 
         return (
@@ -45,7 +45,7 @@ class Main extends Component {
                 <TransitionGroup>
                     <CSSTransition key={this.props.location.key} classNames="page" timeout={300}>
                         <Switch>
-                            <Route exact path='/home' component={MainPage} />
+                        <Route exact path='/home' render={() => <Graphic hero={this.props.hero} />} />
                             {/* <Route exact path='/about' component={MainPage} /> */}
                             <Route exact path='/work' render={() => <Work examples={this.props.examples} />} />
                             <Route path='/work/:exampleId' component={WorkMatchClick} />
