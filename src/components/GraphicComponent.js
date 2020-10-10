@@ -1,5 +1,6 @@
 import React from 'react';
-import About from './AboutComponent';
+// import About from './AboutComponent';
+
 
 function Graphic(props) {
     const graphic = props.hero.map(info => {
@@ -8,9 +9,9 @@ function Graphic(props) {
             <div key={info.id}>
                 <RenderHeroGraphicItem info={info} />
             </div>
-            <div>
+            {/* <div>
                 <About />
-            </div>
+            </div> */}
             </>
         )
     });
@@ -26,7 +27,7 @@ function Graphic(props) {
 function RenderHeroGraphicItem({ info }) {
     return (
         <div className="row mx-auto">
-            <div className="col-12 hero-graphic-photo mx-auto">
+            <div className="col-12 hero-graphic-photo mx-auto  mb-4">
                 <div className="colour-overlay">
                     <img width="100%" src={info.image} alt={info.title} />
                 </div>

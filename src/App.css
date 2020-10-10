@@ -1,4 +1,5 @@
 body {
+  background-color: #FCF9ED;
   font-family:"Merriweather Sans";
   font-weight:300;
   margin:0px;
@@ -50,11 +51,18 @@ h5{
 /* HeaderComponent */
 
 .navbar{
-  border-bottom:solid 2px black;
+  background-color: #A1CFCD;
+  /* border-bottom:solid 2px black; */
 }
 
 .navbar-light .navbar-nav .nav-link{
+  font-family:"Catamaran";
+  font-weight:700;
+  font-size: 1.1rem;
   color:black;
+  background:linear-gradient(to bottom,  #A1CFCD 50%, #FFFFFF 50%);
+  max-height:45px;
+  padding:0 30px;
 }
 
 .navbar-light .navbar-toggler{
@@ -69,19 +77,32 @@ h5{
   transition:all 0.3s ease-in-out;
 }
 
-.nav-link{
-  font-family:"Catamaran";
-  font-weight:700;
-  font-size: 1rem;
-  color:black;
-}
-
 .navbar-brand {
   font-family:"Catamaran";
   font-weight:900;
   font-size: 1.5rem;
   color:black;
+  background:linear-gradient(to bottom,  #A1CFCD 50%, #FFFFFF 50%); 
+  max-height:45px;
+  padding:0 20px
 }
+
+/* AboutComponent */
+
+.about-me-header{
+  margin-top:-36px;
+  background:linear-gradient(to bottom, #FFFFFF 50%, #E2ACAC 50%);
+  max-width: 400px;
+}
+
+.about-me-container{
+  background-color: #FAF3F3;
+}
+
+.about-info-styling{
+  max-width:1000px;
+}
+
 
 /* GraphicComponent */
 
@@ -95,7 +116,7 @@ h5{
   font-size: 1rem;
 }
 .hero-graphic-photo{
-  max-width:1893px;
+  max-width:1366px;
   position: relative;
   color:black;
 } 

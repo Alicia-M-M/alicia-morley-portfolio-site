@@ -53,7 +53,7 @@ function RenderWorkCardItem({ example }) {
 function Work(props) {
     const work = props.examples.map(example => {
         return (
-            <div key={example.id} className="col-md-6 pb-4">
+            <div key={example.id} className="col-md-6 col-sm-12 pb-4 work-card-direction">
                 <RenderWorkCardItem example={example} />
             </div>
         )
