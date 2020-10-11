@@ -38,7 +38,6 @@ h5{
 }
 
 /* GeneralButtons */
-
 .button-styling-green{
   color:#FFFFFF;
   background-color: #779A98;
@@ -46,13 +45,31 @@ h5{
   font-family:"Catamaran";
   font-weight:900;
   border-color:transparent;
+  min-width:220px;
+}
+
+.button-styling-green:hover{
+  background-color: #A1CFCD;
+
 }
 
 /* HeaderComponent */
-
 .navbar{
   background-color: #A1CFCD;
-  /* border-bottom:solid 2px black; */
+}
+
+.navbar-light .navbar-nav .nav-item{
+  /* font-family:"Catamaran";
+  font-weight:700;
+  font-size: 1.1rem;
+  color:black; */
+  background:linear-gradient(to bottom,  #A1CFCD 50%, #FFFFFF 50%);
+  max-width:222px;
+  max-height:45px;
+  padding:0 30px;
+  /* background-position: 0 100%;
+  background-repeat: repeat-x; */
+  /* background-size: 4px 4px; */
 }
 
 .navbar-light .navbar-nav .nav-link{
@@ -60,9 +77,15 @@ h5{
   font-weight:700;
   font-size: 1.1rem;
   color:black;
-  background:linear-gradient(to bottom,  #A1CFCD 50%, #FFFFFF 50%);
-  max-height:45px;
-  padding:0 30px;
+  background:linear-gradient(to bottom, transparent 50%, #E2ACAC 50%);
+  /*   */
+  /* max-height:20px;  */
+  /* padding:0 30px;  */
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 50px;
+  margin-bottom:20px;
+  transition:all 0.15s ease-in;
 }
 
 .navbar-light .navbar-toggler{
@@ -73,8 +96,10 @@ h5{
 }
 
 .navbar-light .navbar-nav .nav-link:hover{
-  color:grey;
-  transition:all 0.3s ease-in-out;
+    background-size: 4px 80px;
+    background-color: #E2ACAC;
+    color:black;
+    transition:all 0.3s ease-in;
 }
 
 .navbar-brand {
@@ -82,16 +107,15 @@ h5{
   font-weight:900;
   font-size: 1.5rem;
   color:black;
-  background:linear-gradient(to bottom,  #A1CFCD 50%, #FFFFFF 50%); 
+  background:linear-gradient(to bottom, #A1CFCD 50%, #FFFFFF 50%); 
   max-height:45px;
   padding:0 20px
 }
 
 /* AboutComponent */
-
 .about-me-header{
   margin-top:-36px;
-  background:linear-gradient(to bottom, #FFFFFF 50%, #E2ACAC 50%);
+  background:linear-gradient(to bottom, #FCF9ED 50%, #E2ACAC 50%);
   max-width: 400px;
 }
 
@@ -100,12 +124,40 @@ h5{
 }
 
 .about-info-styling{
+  background-color: #FFFFFF;
   max-width:1000px;
 }
 
+.about-image-styling{
+  padding:0;
+}
+
+.about-image-styling-direct{
+  object-fit:cover;
+  height:400px;
+}
+
+/* AboutComponent-Modal */
+
+.modal-dialog{
+  max-width:800px;
+  border:none;
+}
+
+.modal-body{
+  padding:0px;
+}
+
+.modal-content{
+  border-radius:0px;
+}
+
+.modal-footer{
+  background-color: #FCF9ED;
+  border-top:0px;
+}
 
 /* GraphicComponent */
-
 .overlayed-text{
   position:absolute;
   top: 40%;
@@ -149,7 +201,6 @@ h5{
 }
 
 /* FooterComponent */
-
 .site-footer {
   color:#FFFFFF;
   background: #779A98;
@@ -265,7 +316,6 @@ h5{
 }
 
 /* WorkInfoComponent */
-
 .card-title{
   font-weight: 700;
   font-size: 1.9rem;
@@ -282,6 +332,10 @@ h5{
   padding-top:0px;
   padding-bottom:0px;
   margin-bottom:0px;
+}
+
+.workInfoCard{
+  border:none;
 }
 
 .workInfoCard hr{
@@ -369,6 +423,11 @@ h5{
 /* HeaderComponent */
   .navbar-brand{
     font-size: 2rem;
+  }
+
+  /* AboutComponent */
+  p{
+    max-width:600px;
   }
 
   /* OverallStyling */

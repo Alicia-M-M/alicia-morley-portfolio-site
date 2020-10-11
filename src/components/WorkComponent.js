@@ -34,7 +34,7 @@ function RenderWorkCardItem({ example }) {
     // )
 
     return (
-        <div className="work-card col">
+        // <div className="work-card col">
             <Link to={`/work/${example.id}`}>
                 <div className={example.color ? 'colour-overlay-container-yellow' : 'colour-overlay-container-green'}>
                     <img className="card-work-info-photo img-fluid" src={example.image} alt={example.name} />
@@ -46,14 +46,14 @@ function RenderWorkCardItem({ example }) {
                     </div>
                 </div>
             </Link>
-        </div>
+        // </div>
     )
 }
 
 function Work(props) {
     const work = props.examples.map(example => {
         return (
-            <div key={example.id} className="col-md-6 col-sm-12 pb-4 work-card-direction">
+            <div key={example.id} className={`col-md-6 col-sm-12 pb-4 ${example.id === 2 ? ' order-last' : ' order-md-last'}`}>
                 <RenderWorkCardItem example={example} />
             </div>
         )
