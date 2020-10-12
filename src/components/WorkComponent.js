@@ -1,52 +1,50 @@
-import React from 'react';
+import React from "react";
 import { Link } from 'react-router-dom';
 
 function RenderWorkCardItem({ example }) {
 
-    // withoutHoverState
-    // return (
-    //     <Card className="work-card">
-    //         <Link to={`/work/${example.id}`}>
-    //             <CardImg className="card-work-info-photo" src={example.image} alt={example.name} />
-    //             <CardImgOverlay className="colour-overlay-container-yellow d-flex align-items-center">
-    //                 <CardBody>
-    //                     <h3 className="text-center ">{example.name}</h3><hr className="line-width mx-auto"></hr>
-    //                     <h5 className="text-center">{example.software}</h5>
-    //                 </CardBody>
-    //             </CardImgOverlay>
-    //         </Link>
-    //     </Card>
-    // )
+    // styling 
 
-    // hoverStateAdded
-    // return (
-    //     <Card className="work-card">
-    //         <Link to={`/work/${example.id}`}>
-    //             <CardImg className="card-work-info-photo" src={example.image} alt={example.name} />
-    //             <CardImgOverlay className={`d-flex align-items-center${example.color ? ' colour-overlay-container-yellow' : ' colour-overlay-container-green'}`}>
-    //                 <CardBody>
-    //                     <h3 className="text-center">{example.name}</h3><hr className="line-width mx-auto"></hr>
-    //                     <h5 className="text-center">{example.software}</h5>
-    //                 </CardBody>
-    //             </CardImgOverlay>
-    //         </Link>
-    //     </Card>
-    // )
+    // const workOverlay = (example.color) ? 'colour-overlay-container-yellow' : 'colour-overlay-container-green';
 
+    // const workText = (example.textColor) ? ' black-info-text' : ' white-info-text';
+
+    // const workSoftware = (example.textColor) ? ' black-info-text' : ' white-info-text';
+
+    // const workHorizontalLine = (example.textColor) ? ' black-info-text' : ' white-info-text';
+
+    // return (
+    //     <Link to={`/work/${example.id}`}>
+    //         <div className={`${workOverlay}`}>
+    //             <img className="card-work-info-photo img-fluid" src={example.image} alt={example.name} />
+    //         </div>
+    //         <div className="d-flex align-items-center">
+    //             <div className="work-overlayed-text">
+    //                 <h3 className={`text-center ${workText}`}>{example.name}</h3><hr className={`mx-auto ${example.textColor ? ' line-width-black' : ' line-width-white'}`}></hr>
+    //                 <h5 className={`text-center pt-1 ${workHorizontalLine}`}>{example.software}</h5>
+    //             </div>
+    //         </div>
+    //     </Link>
+
+    const workOverlay = (example.color) ? 'colour-overlay-container-green' : 'colour-overlay-container-yellow';
+
+    const workText = (example.textColor) ? ' white-info-text' : ' black-info-text';
+
+    const boxBackground = (example.textColor) ? ' work-overlayed-text' : ' work-overlayed-text-2';
     return (
-        // <div className="work-card col">
-            <Link to={`/work/${example.id}`}>
-                <div className={example.color ? 'colour-overlay-container-yellow' : 'colour-overlay-container-green'}>
+        <Link to={`/work/${example.id}`}>
+            <div className="work-container-styles">
+                <div className={`${workOverlay}`}>
                     <img className="card-work-info-photo img-fluid" src={example.image} alt={example.name} />
                 </div>
                 <div className="d-flex align-items-center">
-                    <div className="work-overlayed-text">
-                        <h3 className={`text-center${example.textColor ? ' black-info-text' : ' white-info-text'}`}>{example.name}</h3><hr className={`mx-auto${example.textColor ? ' line-width-black' : ' line-width-white'}`}></hr>
-                        <h5 className={`text-center pt-1${example.textColor ? ' black-info-text' : ' white-info-text'}`}>{example.software}</h5>
+                    <div className={`${boxBackground}`}>
+                        <h3 className={`text-center ${workText}`}>{example.name}</h3>
+                        <h5 className={`text-center pt-1 ${workText}`}>{example.software}</h5>
                     </div>
                 </div>
-            </Link>
-        // </div>
+            </div>
+        </Link>
     )
 }
 
@@ -62,9 +60,9 @@ function Work(props) {
     return (
         <div className="container my-5">
             <div className="row">
-                <div className="col-8 text-center pb-4 mx-auto">
-                    <h2>WORK EXAMPLES</h2>
-                    <p>Below are my most recent examples of work:</p>
+                <div className="col-8 text-center py-5 mx-auto">
+                    <h2 className="about-me-header mx-auto">WORK EXAMPLES</h2>
+                    <p className="mx-auto pt-4">Below are my most recent examples of work:</p>
                 </div>
             </div>
             <div className="row">

@@ -50,10 +50,10 @@ class Contact extends Component {
     render() {
 
         return (
-            <div id="contact_id" className="container">
-                <div className="col-12">
-                    <ContactInfo />
-                </div>
+            <div className="container-fluid about-me-container">
+                {/* <div className="col-12"> */}
+                <ContactInfo />
+                {/* </div> */}
                 <div className="col-md-10 mx-auto">
                     <LocalForm onSubmit={values => this.handleSubmit(values)} >
                         <Row className="form-group">
@@ -181,17 +181,19 @@ class Contact extends Component {
 function ContactInfo(props) {
 
     return (
-        <div id="about_id" className="container my-5">
-            <div classname="row">
-                <div className="col text-center pb-4">
-                    <h2>CONTACT ME</h2>
-                    <p>gmail@gmail.com
+        // <div className="container-fluid my-5 about-me-container">
+        <>
+            <div className="row">
+                <div className="col text-center py-5">
+                    <h2 className="about-me-header mx-auto">CONTACT ME</h2>
+                    <p className="mx-auto pt-4">gmail@gmail.com
                     <br></br>or send me a message:</p>
                 </div>
             </div>
             <div className="row">
             </div>
-        </div>
+        </>
+        // </div>
     );
 }
 

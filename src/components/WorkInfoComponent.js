@@ -18,8 +18,8 @@ function RenderInfoCard({ example }) {
             <Card className="workInfoCard row text-center">
                 <CardImg width="100%" className="card-work-info-photo col-md-6 px-0" src={example.image} alt={example.name} />
                 <CardBody className="col-md-6 align-self-center px-2" >
-                    <CardTitle>{example.name}</CardTitle><hr className="mx-auto"></hr>
-                    <CardSubtitle className="py-3">{example.software}</CardSubtitle>
+                    <CardTitle>{example.name}</CardTitle>
+                    <CardSubtitle className="pb-3">{example.software}</CardSubtitle>
                     <CardText>{example.description}
                     </CardText>
                     <CardFooter>

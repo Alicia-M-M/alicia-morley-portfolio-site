@@ -1,20 +1,19 @@
 export const ABOUTINFO = [
-    // {
-    //     header: "ABOUT ME",
-    //     subHeader: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
-    // },
     {
         id: 0,
+        title:"ABOUT ME",
         img: "/assets/images/about-image-1.png",
-        imgheader: "INFO STUFF",
+        imgheader: "INTERESTS",
         imgtext: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Contrary to popular belief, Lorem Ipsum is not simply ",
-        modalText:"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
+        modalText:"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+        button:"CONTACT ME"
     },
     {
         id: 1,
+        title:"OVERVIEW",
         img: "/assets/images/about-image-2.png",
-        imgheader: "INFO STUFF",
+        imgheader: "PROJECTS AND WORK",
         imgtext: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Contrary to popular belief, Lorem Ipsum is not simply",
-        modalText:"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
+        modalText:"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",button:"BROWSE MY WORK"
     }
 ]

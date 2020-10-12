@@ -14,7 +14,8 @@ const mapStateToProps = state => {
     return {
         examples: state.examples,
         hero: state.hero,
-        aboutInfo: state.aboutInfo
+        aboutInfo: state.aboutInfo,
+        pageLinks: state.pageLinks
     };
 };
 
@@ -51,12 +52,12 @@ class Main extends Component {
                             <Route exact path='/home' component={MainPage} />
                             <Route exact path='/work' render={() => <Work examples={this.props.examples} />} />
                             <Route path='/work/:exampleId' component={WorkMatchClick} />
-                            <Route exact path='/contactus' component={Contact} />
+                            <Route exact path='/contactme' component={Contact} />
                             <Redirect to='/home' />
                         </Switch>
                     </CSSTransition>
                 </TransitionGroup>
-                <Footer />
+                <Footer pageLinks={this.props.pageLinks}/>
             </div>
 
         )

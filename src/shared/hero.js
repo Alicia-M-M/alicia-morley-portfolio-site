@@ -3,6 +3,6 @@ export const HERO =  [
         id:0,
         title:"Hi!",
         intro:"MY NAME IS ALICIA MORLEY AND I AM A WEB DEVELOPER",
-        image:"assets/images/header-v1.png"
+        image:"assets/images/header-v5-yellow-overlay.png"
     }
 ]

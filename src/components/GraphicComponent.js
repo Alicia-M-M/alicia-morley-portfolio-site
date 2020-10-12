@@ -1,5 +1,4 @@
 import React from 'react';
-// import About from './AboutComponent';
 
 
 function Graphic(props) {

@@ -10,6 +10,7 @@ h1,h3,h2{
   font-family:"Catamaran";
   font-weight:900;
   margin:0px;
+  
 }
 
 h4 {
@@ -20,37 +21,76 @@ h4 {
 
 h1{
   font-size: 7rem;
+  
+  
 }
 
 h2{
-  font-size:2.5rem;
+  font-size:1.7rem;
+  letter-spacing:3px;
 }
 h3{
   font-size:1.3rem;
+  letter-spacing:2px;
 }
 
 h4{
   font-size: 1rem;
+  letter-spacing:2px;
 }
 
 h5{
   font-size:1rem;
 }
 
-/* GeneralButtons */
-.button-styling-green{
-  color:#FFFFFF;
-  background-color: #779A98;
-  border-radius:0px;
-  font-family:"Catamaran";
-  font-weight:900;
-  border-color:transparent;
-  min-width:220px;
+/* remove-react-strap-classes */
+.modal-header,
+.modal-header .close,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus,
+.navbar-light .navbar-toggler, .navbar-light .navbar-toggler-icon, .button-styling-green, .button-styling-green:hover {
+    outline: none;
+    box-shadow:none;
+    border:none;
 }
 
-.button-styling-green:hover{
-  background-color: #A1CFCD;
+.form-control:focus, .form-control {
+    outline: none;
+    box-shadow:none;
+    border-radius:0px;
+}
 
+.modal-dialog, .modal-content, .card {
+  border:none;
+  border-radius:0px;
+}
+
+/* GeneralButtons */
+.button-styling-green{
+  color:black;
+  background-color: #A1CFCD;
+  border-radius:0px;
+  font-family:"Catamaran";
+  font-weight:700;
+  min-width:220px;
+  letter-spacing: 2px;
+  transition:all 0.3s ease-in;
+  padding:10px 30px;
+
+}
+
+.button-styling-green:hover  {
+  background-color: #A1CFCD;
+}
+
+.button-styling-green a{
+  color:black;
+}
+
+.button-styling-green a:hover{
+  text-decoration:none;
+  transition:all 0.3s ease-in;
 }
 
 /* HeaderComponent */
@@ -63,10 +103,11 @@ h5{
   font-weight:700;
   font-size: 1.1rem;
   color:black; */
-  background:linear-gradient(to bottom,  #A1CFCD 50%, #FFFFFF 50%);
+  background:linear-gradient(to bottom,  #A1CFCD 50%,  rgba(252,249,237, 0.3) 50%);
   max-width:222px;
   max-height:45px;
   padding:0 30px;
+
   /* background-position: 0 100%;
   background-repeat: repeat-x; */
   /* background-size: 4px 4px; */
@@ -77,29 +118,25 @@ h5{
   font-weight:700;
   font-size: 1.1rem;
   color:black;
-  background:linear-gradient(to bottom, transparent 50%, #E2ACAC 50%);
+  background:linear-gradient(to bottom, transparent 50%, #FDEE67 50%);
+  letter-spacing: 3px;
   /*   */
   /* max-height:20px;  */
   /* padding:0 30px;  */
-  background-position: 0 100%;
+  background-position: 0 50%;
   background-repeat: repeat-x;
-  background-size: 4px 50px;
-  margin-bottom:20px;
+  background-size: 4px 15px;
   transition:all 0.15s ease-in;
-}
-
-.navbar-light .navbar-toggler{
-  border:none;
-}
-.navbar-light .navbar-toggler-icon{
-  border:none;
+  
 }
 
 .navbar-light .navbar-nav .nav-link:hover{
-    background-size: 4px 80px;
-    background-color: #E2ACAC;
-    color:black;
-    transition:all 0.3s ease-in;
+  background-size: 4px 30px;
+  color:black;
+  /* background-color:#FDEE67;
+  background-position: 0 35%;
+  color:black;
+  transition:all 0.15s ease-in; */
 }
 
 .navbar-brand {
@@ -107,9 +144,10 @@ h5{
   font-weight:900;
   font-size: 1.5rem;
   color:black;
-  background:linear-gradient(to bottom, #A1CFCD 50%, #FFFFFF 50%); 
+  background:linear-gradient(to bottom, #A1CFCD 50%, rgba(252,249,237, 0.3)  50%); 
   max-height:45px;
-  padding:0 20px
+  padding:0 20px;
+  letter-spacing:3px;
 }
 
 /* AboutComponent */
@@ -129,27 +167,48 @@ h5{
 }
 
 .about-image-styling{
+  position: relative;
   padding:0;
 }
 
 .about-image-styling-direct{
   object-fit:cover;
-  height:400px;
+  height:300px;
+}
+
+.about-overlayed-text{
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(252,249,237, 0.2);
+  padding:10px;
+  z-index: 100;
 }
 
 /* AboutComponent-Modal */
-
 .modal-dialog{
   max-width:800px;
-  border:none;
+}
+
+.modal-header{
+  position:absolute;
+  right:0px;
 }
 
 .modal-body{
+  position:relative;
   padding:0px;
 }
 
-.modal-content{
-  border-radius:0px;
+.modal-header button.close{
+  color:#FFFFFF;
+  opacity:1;
+}
+
+.modal-body img{
+  object-fit: cover;
+  max-height: 350px ;
 }
 
 .modal-footer{
@@ -177,23 +236,9 @@ h5{
   max-width:200px;
 }
 
-/* below-ovelay-works-but-do-not-use */
-/* .colour-overlay:before {
-  background-color:#FDEE67;
-  position: absolute;
-  opacity: 0.8;
-  border-radius:0px;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  content: ' ';
-} */
-
 .colour-overlay{
   position:relative;
 }
-
 
 .hero-graphic-photo img{
   object-fit:cover;
@@ -207,6 +252,15 @@ h5{
   width: 100%;
   height: 400px;
   line-height: 60px;
+}
+
+.site-footer a{
+  color:#FFFFFF;
+}
+
+.site-footer a:hover{
+  color: #A1CFCD;
+  transition: all 0.3s ease-in-out;
 }
 
 /* WorkComponent */
@@ -248,11 +302,8 @@ h5{
   max-width:220px;
   border:2px solid white;
 }
-.card{
-  border-radius:0px;
-}
 
-.colour-overlay-container-green{
+/* .colour-overlay-container-green{
   position:relative;
 }
 
@@ -272,7 +323,7 @@ h5{
 
 .colour-overlay-container-green:hover:after{
   opacity: 0;
-}
+} */
 
 .work-overlayed-text{
   position:absolute;
@@ -281,7 +332,7 @@ h5{
   transform: translate(-50%, -50%);
 }
 
-.colour-overlay-container-yellow{
+/* .colour-overlay-container-yellow{
   position:relative;
 }
 
@@ -301,18 +352,80 @@ h5{
 
 .colour-overlay-container-yellow:hover:after{
   opacity: 0;
-}
+} */
 
 .work-overlayed-text{
   position:absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background:rgba(252,249,237, 0.15);
+  padding:10px;
+  /* border-top:20px solid #E2ACAC;
+  border-bottom:20px solid #E2ACAC;
+  border-left:10px solid #E2ACAC;
+  border-right:10px solid #E2ACAC; */
+ 
+}
+.work-overlayed-text-2{
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(252,249,237, 0.3);
+  padding:10px;
+  /* border-top:20px solid #E2ACAC;
+  border-bottom:20px solid #E2ACAC;
+  border-left:10px solid #E2ACAC;
+  border-right:10px solid #E2ACAC; */
+ 
 }
 
 .card-work-info-photo {
   object-fit: cover;
   border-radius:0px;
+}
+
+
+/* tester-for-overlay */
+.work-container-styles{
+  position:relative;
+}
+
+.work-container-styles .colour-overlay-container-yellow:after{
+  background: #FDEE67;
+  color:black;
+  opacity: 0.5;
+  position:absolute;
+  transition:all 0.9s ease-in-out;
+  border-radius:0px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  content: ' ';
+}
+
+.work-container-styles:hover .colour-overlay-container-yellow:after{
+  opacity: 0.4;
+} 
+
+.work-container-styles .colour-overlay-container-green:after{
+  background:  #779A98;
+  color:black;
+  opacity: 0.6;
+  position:absolute;
+  transition:all 0.9s ease-in-out;
+  border-radius:0px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  content: ' ';
+}
+
+.work-container-styles:hover .colour-overlay-container-green:after{
+  opacity: 0.4;
 }
 
 /* WorkInfoComponent */
@@ -323,7 +436,7 @@ h5{
 }
 
 .card-subtitle{
-  font-size: 1.1rem;
+  font-size: 0.8rem;
 }
 .card-footer, .card-title, .breadcrumb, .card-subtitle{
   background-color: transparent;
@@ -332,10 +445,6 @@ h5{
   padding-top:0px;
   padding-bottom:0px;
   margin-bottom:0px;
-}
-
-.workInfoCard{
-  border:none;
 }
 
 .workInfoCard hr{
@@ -361,7 +470,6 @@ h5{
 /* ContactComponent */
   .form-control{
     font-size:0.8rem;
-    border-radius:0px;
     font-weight:300;
   }
 
@@ -415,6 +523,10 @@ h5{
   /* WorkInfoComponent */
   .workInfoCard {
     flex-direction: row;
+  }
+
+  h2{
+    font-size:2.4rem;
   }
 
 }
