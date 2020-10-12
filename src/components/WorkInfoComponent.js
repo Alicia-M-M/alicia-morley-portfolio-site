@@ -17,10 +17,10 @@ function RenderInfoCard({ example }) {
         <div className="col-lg-10 col-md-12 px-5 mx-auto" >
             <Card className="workInfoCard row text-center">
                 <CardImg width="100%" className="card-work-info-photo col-md-6 px-0" src={example.image} alt={example.name} />
-                <CardBody className="col-md-6 align-self-center px-2" >
+                <CardBody className="col-md-6 align-self-center px-3" >
                     <CardTitle>{example.name}</CardTitle>
                     <CardSubtitle className="pb-3">{example.software}</CardSubtitle>
-                    <CardText>{example.description}
+                    <CardText className="mx-auto">{example.description}
                     </CardText>
                     <CardFooter>
                         <a className="px-2" href={example.github}>{github}</a>

@@ -15,10 +15,10 @@ function About(props) {
 
     return (
         <>
-            <div className="container-fluid my-5 about-me-container pb-5">
+            <div className="container-fluid about-container-height container-background-color pb-5">
                 <div className="row">
-                    <div className="col-12 col-md-8 text-center pb-5 mx-auto">
-                        <h2 className="about-me-header mx-auto mb-4">ABOUT ME</h2>
+                    <div id="about_id" className="col-12 col-md-8 text-center pb-5 mx-auto">
+                        <h2 className="page-header-styling  mx-auto mb-4">ABOUT ME</h2>
                         <p className="px-4 mx-auto">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. </p>
                     </div>
                 </div>
@@ -27,10 +27,11 @@ function About(props) {
             <div className="container py-5">
                 <div className="row">
                     <div className="col-12 mx-auto text-center py-5">
-                        <Button className="button-styling-green "><a href={"/assets/images/resume.pdf"}>DOWNLOAD MY RESUME</a></Button>
+                        <Button className="button-styling-green "><a href={"/assets/images/resume.pdf"}>DOWNLOAD MY RESUME</a><div className="button-styling-underline"></div></Button>
                     </div>
                 </div>
             </div>
+
         </>
     );
 }
@@ -63,7 +64,7 @@ function RenderAboutCards({ aboutInfos }) {
             <FadeTransform
                 in
                 transformProps={{
-                    exitTransform: 'scale(0.5) translateY(50%)'
+                    exitTransform: 'scale(0.5) translatey(50%)'
                 }}>
                 <div className="row about-info-styling mx-auto mb-5">
                     <div className={`work-container-styles col-md-6 col-12 about-image-styling  ${order}`}>

@@ -8,15 +8,12 @@ function Graphic(props) {
             <div key={info.id}>
                 <RenderHeroGraphicItem info={info} />
             </div>
-            {/* <div>
-                <About />
-            </div> */}
             </>
         )
     });
 
     return (
-        <div className="container-fluid">
+        <div id="home_id" className="container-fluid">
             {graphic}
         </div>
     );
@@ -26,7 +23,7 @@ function Graphic(props) {
 function RenderHeroGraphicItem({ info }) {
     return (
         <div className="row mx-auto">
-            <div className="col-12 hero-graphic-photo mx-auto  mb-4">
+            <div className="col-12 hero-graphic-photo mx-auto">
                 <div className="colour-overlay">
                     <img width="100%" src={info.image} alt={info.title} />
                 </div>

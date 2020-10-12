@@ -21,8 +21,6 @@ h4 {
 
 h1{
   font-size: 7rem;
-  
-  
 }
 
 h2{
@@ -40,7 +38,8 @@ h4{
 }
 
 h5{
-  font-size:1rem;
+  font-size:0.6rem;
+  letter-spacing:2px;
 }
 
 /* remove-react-strap-classes */
@@ -50,15 +49,15 @@ h5{
 .navbar-toggler:active,
 .navbar-toggler-icon:focus,
 .navbar-light .navbar-toggler, .navbar-light .navbar-toggler-icon, .button-styling-green, .button-styling-green:hover {
-    outline: none;
-    box-shadow:none;
-    border:none;
+  outline: none;
+  box-shadow:none;
+  border:none;
 }
 
 .form-control:focus, .form-control {
-    outline: none;
-    box-shadow:none;
-    border-radius:0px;
+  outline: none;
+  box-shadow:none;
+  border-radius:0px;
 }
 
 .modal-dialog, .modal-content, .card {
@@ -66,7 +65,62 @@ h5{
   border-radius:0px;
 }
 
-/* GeneralButtons */
+/* GeneralStyling */
+/* container-styling */
+.cream-background{
+  top:103px;
+  background-color: #FCF9ED;
+}
+
+.container-height{
+  margin-bottom:150px;
+  margin-top:50px;
+}
+
+.about-container-height{
+  margin-top:50px;
+}
+
+.container-background-color{
+  background-color: #FAF3F3;
+}
+
+.page-header-styling{
+  margin-top:-25px;
+  background:linear-gradient(to bottom, #FCF9ED 50%, #E2ACAC 50%);
+  max-width: 500px;
+}
+
+/* button-styling */
+.button-styling-underline{
+  position: absolute;
+  top:70px;
+  height:20px;
+  width:220px;
+  background: rgba(252,249,237, 0.3) 50%;
+}
+
+.button-styling-green:hover  {
+  background-color: #A1CFCD;
+}
+
+.button-styling-green a{
+  z-index:100;
+  position: relative;
+  color:black;
+  background:linear-gradient(to bottom, transparent 50%, #FDEE67 50%);
+  background-position: 0 50%;
+  background-repeat: repeat-x;
+  background-size: 4px 20px;
+  transition:all 0.15s ease-in;
+  min-width:240px;
+}
+
+.button-styling-green a:hover{
+  text-decoration:none;
+  background-size: 4px 45px;
+}
+
 .button-styling-green{
   color:black;
   background-color: #A1CFCD;
@@ -76,21 +130,7 @@ h5{
   min-width:220px;
   letter-spacing: 2px;
   transition:all 0.3s ease-in;
-  padding:10px 30px;
-
-}
-
-.button-styling-green:hover  {
-  background-color: #A1CFCD;
-}
-
-.button-styling-green a{
-  color:black;
-}
-
-.button-styling-green a:hover{
-  text-decoration:none;
-  transition:all 0.3s ease-in;
+  padding:10px 10px 14px 10px;
 }
 
 /* HeaderComponent */
@@ -99,18 +139,10 @@ h5{
 }
 
 .navbar-light .navbar-nav .nav-item{
-  /* font-family:"Catamaran";
-  font-weight:700;
-  font-size: 1.1rem;
-  color:black; */
   background:linear-gradient(to bottom,  #A1CFCD 50%,  rgba(252,249,237, 0.3) 50%);
   max-width:222px;
   max-height:45px;
-  padding:0 30px;
-
-  /* background-position: 0 100%;
-  background-repeat: repeat-x; */
-  /* background-size: 4px 4px; */
+  padding:0 10px;
 }
 
 .navbar-light .navbar-nav .nav-link{
@@ -120,9 +152,6 @@ h5{
   color:black;
   background:linear-gradient(to bottom, transparent 50%, #FDEE67 50%);
   letter-spacing: 3px;
-  /*   */
-  /* max-height:20px;  */
-  /* padding:0 30px;  */
   background-position: 0 50%;
   background-repeat: repeat-x;
   background-size: 4px 15px;
@@ -133,10 +162,6 @@ h5{
 .navbar-light .navbar-nav .nav-link:hover{
   background-size: 4px 30px;
   color:black;
-  /* background-color:#FDEE67;
-  background-position: 0 35%;
-  color:black;
-  transition:all 0.15s ease-in; */
 }
 
 .navbar-brand {
@@ -145,22 +170,11 @@ h5{
   font-size: 1.5rem;
   color:black;
   background:linear-gradient(to bottom, #A1CFCD 50%, rgba(252,249,237, 0.3)  50%); 
-  max-height:45px;
-  padding:0 20px;
+  height:42px;
   letter-spacing:3px;
 }
 
 /* AboutComponent */
-.about-me-header{
-  margin-top:-36px;
-  background:linear-gradient(to bottom, #FCF9ED 50%, #E2ACAC 50%);
-  max-width: 400px;
-}
-
-.about-me-container{
-  background-color: #FAF3F3;
-}
-
 .about-info-styling{
   background-color: #FFFFFF;
   max-width:1000px;
@@ -279,6 +293,7 @@ h5{
   border:none;
   color:black;
   font-weight:900;
+  letter-spacing:2px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -303,6 +318,8 @@ h5{
   border:2px solid white;
 }
 
+
+/* original-color-overlay-not-using */
 /* .colour-overlay-container-green{
   position:relative;
 }
@@ -325,12 +342,7 @@ h5{
   opacity: 0;
 } */
 
-.work-overlayed-text{
-  position:absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+
 
 /* .colour-overlay-container-yellow{
   position:relative;
@@ -361,11 +373,6 @@ h5{
   transform: translate(-50%, -50%);
   background:rgba(252,249,237, 0.15);
   padding:10px;
-  /* border-top:20px solid #E2ACAC;
-  border-bottom:20px solid #E2ACAC;
-  border-left:10px solid #E2ACAC;
-  border-right:10px solid #E2ACAC; */
- 
 }
 .work-overlayed-text-2{
   position:absolute;
@@ -374,11 +381,6 @@ h5{
   transform: translate(-50%, -50%);
   background: rgba(252,249,237, 0.3);
   padding:10px;
-  /* border-top:20px solid #E2ACAC;
-  border-bottom:20px solid #E2ACAC;
-  border-left:10px solid #E2ACAC;
-  border-right:10px solid #E2ACAC; */
- 
 }
 
 .card-work-info-photo {
@@ -386,8 +388,7 @@ h5{
   border-radius:0px;
 }
 
-
-/* tester-for-overlay */
+/* final-for-overlay */
 .work-container-styles{
   position:relative;
 }
@@ -407,7 +408,7 @@ h5{
 }
 
 .work-container-styles:hover .colour-overlay-container-yellow:after{
-  opacity: 0.4;
+  opacity: 0.2;
 } 
 
 .work-container-styles .colour-overlay-container-green:after{
@@ -425,18 +426,20 @@ h5{
 }
 
 .work-container-styles:hover .colour-overlay-container-green:after{
-  opacity: 0.4;
+  opacity: 0.2;
 }
 
 /* WorkInfoComponent */
 .card-title{
-  font-weight: 700;
-  font-size: 1.9rem;
+  font-weight: 900;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
   font-family:"Catamaran";
 }
 
 .card-subtitle{
-  font-size: 0.8rem;
+  font-size:0.7rem;
+  letter-spacing:2px;
 }
 .card-footer, .card-title, .breadcrumb, .card-subtitle{
   background-color: transparent;
@@ -455,7 +458,7 @@ h5{
 }
 
 .card-text{
-  font-size:0.8rem;
+  font-size:0.7rem;
 }
 
 .card-footer a{
@@ -468,38 +471,52 @@ h5{
 }
 
 /* ContactComponent */
-  .form-control{
+.form-control{
     font-size:0.8rem;
     font-weight:300;
   }
 
-  .form-group label{
+.form-group label{
     font-family:"Catamaran";
     font-weight:700;
-    font-size: 1.5rem;
+    font-size: 0.8rem;
+    letter-spacing:2px;
   }
 
-  .form-group{
+.form-group{
     font-size: 0.8rem;
   }
 
+.contact-me-container{
+  position:relative;
+  background-color: #FAF3F3;
+  margin-top:100px;
+  }
+  
+.contact-me-header {
+  position: absolute;
+  top:-34px;
+  background:linear-gradient(to bottom, #FCF9ED 50%, #E2ACAC 50%);
+  max-width: 400px;
+  }
+
   /* transitions */
-  .page-enter {
-    opacity: 0;
+.page-enter {
+  opacity: 0;
 }
 
 .page-enter-active {
-    opacity: 1;
-    transition: 300ms ease-out;
+  opacity: 1;
+  transition: 300ms ease-out;
 }
 
 .page-exit {
-    opacity: 1;
+  opacity: 1;
 }
 
 .page-exit-active {
-    opacity: 0;
-    transition: 300ms ease-in;
+  opacity: 0;
+  transition: 300ms ease-in;
 }
 
 /* .page-enter {
@@ -529,68 +546,97 @@ h5{
     font-size:2.4rem;
   }
 
+  /* AboutComponent */
+.about-me-header{
+  margin-top:-36px;
+  }
+
+  /* General-styling */
+.container-height{
+  margin-top:100px;
+}
+
+.about-container-height{
+  margin-top:100px;
+}
+
 }
 
 @media (min-width: 992px) {
 /* HeaderComponent */
-  .navbar-brand{
-    font-size: 2rem;
-  }
+.navbar-brand{
+  font-size: 2rem;
+  padding:0 20px;
+}
 
   /* AboutComponent */
-  p{
-    max-width:600px;
-  }
+p{
+  max-width:600px;
+}
 
   /* OverallStyling */
-  h4{
-    font-size:1.5rem;
-  }
+h4{
+  font-size:1.5rem;
+}
 
-  h3{
-    font-size:1.7rem;
-  }
-  
-  h5{
-    font-size:1.2rem;
-  }
+h3{
+  font-size:1.7rem;
+}
 
-  /* GraphicComponent */
-  .hero-graphic-photo {
-    padding:0 80px;
-  }
+h5{
+  font-size:0.9rem;
+}
 
   /* GraphicComponent */
-  .overlayed-text h4{
-    font-size: 1rem;
-  }
-    /* WorkInfoComponent */
-  .card-text {
-    font-size:0.9rem;
-  }
-
-  .graphic-intro-text{
-    max-width:230px;
-  }
+.hero-graphic-photo {
+  padding:0 80px;
+}
 
   /* GraphicComponent */
-  h1{
-    font-size: 10rem;
-  }
+.overlayed-text h4{
+  font-size: 1rem;
+}
+  /* WorkInfoComponent */
+.card-text {
+  font-size:0.9rem;
+  padding:0px 40px;
+}
 
-  .overlayed-text h4{
-    font-size: 1.1rem;
-  }
+.card-title{
+  font-size:1.8rem;
+}
+
+.card-subtitle{
+  font-size:0.9rem;
+}
+
+.graphic-intro-text{
+  max-width:230px;
+}
+
+/* GraphicComponent */
+h1{
+  font-size: 10rem;
+}
+
+.overlayed-text h4{
+  font-size: 1.1rem;
+}
+
+  /* form */
+.form-group label{
+  font-size:1.2rem;
+}
 
 }
 
 @media (min-width: 1200px) { 
-  h1{
-    font-size: 12rem;
-  }
+h1{
+  font-size: 12rem;
+}
 
-  .workInfoContainer {
-    padding-top:80px;
-    padding-bottom:100px;
-  }
+.workInfoContainer {
+  padding-top:80px;
+  padding-bottom:100px;
+}
 }

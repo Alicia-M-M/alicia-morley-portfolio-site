@@ -50,10 +50,8 @@ class Contact extends Component {
     render() {
 
         return (
-            <div className="container-fluid about-me-container">
-                {/* <div className="col-12"> */}
+            <div className="container-fluid container-background-color container-height">
                 <ContactInfo />
-                {/* </div> */}
                 <div className="col-md-10 mx-auto">
                     <LocalForm onSubmit={values => this.handleSubmit(values)} >
                         <Row className="form-group">
@@ -165,14 +163,15 @@ class Contact extends Component {
                                 />
                             </Col>
                         </Row>
-                        <Row className="form-group">
-                            <Col className="text-center mx-auto" md={{ size: 10, offset: 2 }}>
+                        <Row className="form-group ">
+                            <Col className="text-center mx-auto cream-background" md={{ size: 10, offset: 2 }}>
                                 <Button className="button-styling-green" type="submit">SUBMIT</Button>
                             </Col>
                         </Row>
                     </LocalForm>
                 </div>
             </div>
+
 
         );
     }
@@ -181,19 +180,13 @@ class Contact extends Component {
 function ContactInfo(props) {
 
     return (
-        // <div className="container-fluid my-5 about-me-container">
-        <>
-            <div className="row">
-                <div className="col text-center py-5">
-                    <h2 className="about-me-header mx-auto">CONTACT ME</h2>
-                    <p className="mx-auto pt-4">gmail@gmail.com
+        <div className="row">
+            <div className="col text-center">
+                <h2 className="page-header-styling mx-auto">CONTACT ME</h2>
+                <p className="mx-auto pt-4">gmail@gmail.com
                     <br></br>or send me a message:</p>
-                </div>
             </div>
-            <div className="row">
-            </div>
-        </>
-        // </div>
+        </div>
     );
 }
 

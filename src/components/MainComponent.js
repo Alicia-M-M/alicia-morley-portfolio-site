@@ -35,7 +35,7 @@ class Main extends Component {
             return (
                 <div>
                     <Graphic hero={this.props.hero} />
-                    <About aboutInfo={this.props.aboutInfo}/>
+                    <About aboutInfo={this.props.aboutInfo} />
                 </div>
             );
         };
@@ -47,8 +47,6 @@ class Main extends Component {
                 <TransitionGroup>
                     <CSSTransition key={this.props.location.key} classNames="page" timeout={300}>
                         <Switch>
-                        {/* <Route exact path='/home' render={() => <Graphic hero={this.props.hero} />} /> */}
-                            {/* <Route exact path='/about' component={MainPage} /> */}
                             <Route exact path='/home' component={MainPage} />
                             <Route exact path='/work' render={() => <Work examples={this.props.examples} />} />
                             <Route path='/work/:exampleId' component={WorkMatchClick} />
@@ -57,7 +55,7 @@ class Main extends Component {
                         </Switch>
                     </CSSTransition>
                 </TransitionGroup>
-                <Footer pageLinks={this.props.pageLinks}/>
+                <Footer pageLinks={this.props.pageLinks} />
             </div>
 
         )

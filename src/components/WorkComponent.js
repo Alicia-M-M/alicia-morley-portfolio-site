@@ -58,15 +58,17 @@ function Work(props) {
     });
 
     return (
-        <div className="container my-5">
+        <div className="container-fluid container-background-color container-height">
             <div className="row">
-                <div className="col-8 text-center py-5 mx-auto">
-                    <h2 className="about-me-header mx-auto">WORK EXAMPLES</h2>
+                <div className="col-md-8 col-12 text-center pb-5 mx-auto">
+                    <h2 className="page-header-styling  mx-auto">WORK EXAMPLES</h2>
                     <p className="mx-auto pt-4">Below are my most recent examples of work:</p>
                 </div>
             </div>
-            <div className="row">
-                {work}
+            <div className="container">
+                <div className="row">
+                    {work}
+                </div>
             </div>
         </div>
     );

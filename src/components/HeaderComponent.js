@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
 
 class Header extends Component {
 
@@ -28,17 +29,15 @@ class Header extends Component {
                     <Collapse isOpen={this.state.isNavOpen} navbar>
                         <Nav navbar className="ml-auto" >
                             <NavItem >
-                                <NavLink className="nav-link" to="/home">
+                                <NavHashLink className="nav-link" smooth to="/mainpage/#top">
                                     HOME
-                                    </NavLink>
-                                {/* <a href="#home_id">
-                                    HOME</a> */}
+                                    </NavHashLink>
                             </NavItem>
-                            {/* <NavItem>
-                                <NavLink className="nav-link" to="/#"><a href="#about_id">
-                                    ABOUT</a>
-                                </NavLink>
-                            </NavItem> */}
+                            <NavItem>
+                                <NavHashLink className="nav-link" to="/mainpage/#about_id" scroll={el => { el.scrollIntoView(true); window.scrollBy(0, -158) }}>
+                                    ABOUT
+                                </NavHashLink>
+                            </NavItem>
                             <NavItem >
                                 <NavLink className="nav-link" to="/work">
                                     WORK
