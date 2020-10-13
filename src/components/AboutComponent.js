@@ -27,7 +27,9 @@ function About(props) {
             <div className="container py-5">
                 <div className="row">
                     <div className="col-12 mx-auto text-center py-5">
-                        <Button className="button-styling-green "><a href={"/assets/images/resume.pdf"}>DOWNLOAD MY RESUME</a><div className="button-styling-underline"></div></Button>
+                        <div className="button-background mx-auto">
+                            <Button><a href={"/assets/images/resume.pdf"}>DOWNLOAD MY RESUME</a></Button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -95,7 +97,9 @@ function RenderAboutCards({ aboutInfos }) {
                     </p>
                 </ModalBody>
                 <ModalFooter className="text-center py-4 mt-2">
-                    <Button className="button-styling-green mx-auto" onClick={handleClick}>{aboutInfos.button}</Button>{' '}
+                <div className="button-background">
+                    <Button className="mx-auto" onClick={handleClick}><div className="button-text">{aboutInfos.button}</div></Button>{' '}
+                    </div>
                 </ModalFooter>
             </Modal>
         </>

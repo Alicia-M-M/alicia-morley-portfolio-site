@@ -34,7 +34,7 @@ class Header extends Component {
                                     </NavHashLink>
                             </NavItem>
                             <NavItem>
-                                <NavHashLink className="nav-link" to="/mainpage/#about_id" scroll={el => { el.scrollIntoView(true); window.scrollBy(0, -158) }}>
+                                <NavHashLink className="nav-link" to="/mainpage/#about_id" scroll={el => { el.scrollIntoView(true); window.scrollBy(0, (window.innerWidth >= 764 ? -158 : -276 ) )}}>
                                     ABOUT
                                 </NavHashLink>
                             </NavItem>

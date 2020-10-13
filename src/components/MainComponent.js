@@ -35,7 +35,7 @@ class Main extends Component {
             return (
                 <div>
                     <Graphic hero={this.props.hero} />
-                    <About aboutInfo={this.props.aboutInfo} />
+                    <About aboutInfo={this.props.aboutInfo}/>
                 </div>
             );
         };

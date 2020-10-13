@@ -164,8 +164,10 @@ class Contact extends Component {
                             </Col>
                         </Row>
                         <Row className="form-group ">
-                            <Col className="text-center mx-auto cream-background" md={{ size: 10, offset: 2 }}>
-                                <Button className="button-styling-green" type="submit">SUBMIT</Button>
+                            <Col className="text-center mx-auto cream-background" md={{ size: 2, offset: 2 }}>
+                            <div className="button-background-submit mx-auto" >
+                                <Button className="" type="submit"><div className="button-text">SUBMIT</div></Button>
+                                </div>
                             </Col>
                         </Row>
                     </LocalForm>

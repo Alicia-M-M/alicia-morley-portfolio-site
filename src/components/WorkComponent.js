@@ -3,29 +3,6 @@ import { Link } from 'react-router-dom';
 
 function RenderWorkCardItem({ example }) {
 
-    // styling 
-
-    // const workOverlay = (example.color) ? 'colour-overlay-container-yellow' : 'colour-overlay-container-green';
-
-    // const workText = (example.textColor) ? ' black-info-text' : ' white-info-text';
-
-    // const workSoftware = (example.textColor) ? ' black-info-text' : ' white-info-text';
-
-    // const workHorizontalLine = (example.textColor) ? ' black-info-text' : ' white-info-text';
-
-    // return (
-    //     <Link to={`/work/${example.id}`}>
-    //         <div className={`${workOverlay}`}>
-    //             <img className="card-work-info-photo img-fluid" src={example.image} alt={example.name} />
-    //         </div>
-    //         <div className="d-flex align-items-center">
-    //             <div className="work-overlayed-text">
-    //                 <h3 className={`text-center ${workText}`}>{example.name}</h3><hr className={`mx-auto ${example.textColor ? ' line-width-black' : ' line-width-white'}`}></hr>
-    //                 <h5 className={`text-center pt-1 ${workHorizontalLine}`}>{example.software}</h5>
-    //             </div>
-    //         </div>
-    //     </Link>
-
     const workOverlay = (example.color) ? 'colour-overlay-container-green' : 'colour-overlay-container-yellow';
 
     const workText = (example.textColor) ? ' white-info-text' : ' black-info-text';

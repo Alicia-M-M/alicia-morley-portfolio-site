@@ -48,7 +48,7 @@ h5{
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus,
-.navbar-light .navbar-toggler, .navbar-light .navbar-toggler-icon, .button-styling-green, .button-styling-green:hover {
+.navbar-light .navbar-toggler, .navbar-light .navbar-toggler-icon {
   outline: none;
   box-shadow:none;
   border:none;
@@ -58,6 +58,10 @@ h5{
   outline: none;
   box-shadow:none;
   border-radius:0px;
+}
+
+.btn-secondary a:active{
+background-color: transparent;
 }
 
 .modal-dialog, .modal-content, .card {
@@ -92,45 +96,53 @@ h5{
 }
 
 /* button-styling */
-.button-styling-underline{
-  position: absolute;
-  top:70px;
-  height:20px;
-  width:220px;
-  background: rgba(252,249,237, 0.3) 50%;
-}
-
-.button-styling-green:hover  {
-  background-color: #A1CFCD;
-}
-
-.button-styling-green a{
-  z-index:100;
-  position: relative;
-  color:black;
-  background:linear-gradient(to bottom, transparent 50%, #FDEE67 50%);
-  background-position: 0 50%;
-  background-repeat: repeat-x;
-  background-size: 4px 20px;
-  transition:all 0.15s ease-in;
-  min-width:240px;
-}
-
-.button-styling-green a:hover{
-  text-decoration:none;
-  background-size: 4px 45px;
-}
-
-.button-styling-green{
-  color:black;
-  background-color: #A1CFCD;
-  border-radius:0px;
+.btn-secondary a, .button-text{
   font-family:"Catamaran";
   font-weight:700;
-  min-width:220px;
-  letter-spacing: 2px;
-  transition:all 0.3s ease-in;
-  padding:10px 10px 14px 10px;
+  font-size: 1.1rem;
+  color:black;
+  background:linear-gradient(to bottom, transparent 50%, #FDEE67 50%);
+  letter-spacing: 3px;
+  background-position: 0 50%;
+  background-repeat: repeat-x;
+  background-size: 4px 15px;
+  transition:all 0.15s ease-in;
+}
+
+.btn-secondary a:hover, .button-text:hover{
+  text-decoration:none;
+  background-size: 4px 40px;
+}
+
+.btn-secondary:hover  {
+  background-color:  #A1CFCD;;
+}
+
+.btn-secondary{
+  background:linear-gradient(to bottom,  #A1CFCD 50%,  rgba(252,249,237, 0.3) 50%);
+  border-radius:0px;
+  height:40px;
+  padding:0 10px;
+  
+}
+
+.btn-secondary:focus, .btn-secondary:active, .btn-secondary, .btn-secondary:hover, .btn-secondary a:active {
+  background-color: none !important;
+  outline: none !important;
+  border: none !important;
+  box-shadow:none !important;
+}
+
+.button-background{
+  background-color: #A1CFCD;
+  padding:6px 6px 8px 6px;
+  max-width:300px;
+}
+
+.button-background-submit{
+  background-color: #A1CFCD;
+  padding:6px 6px 8px 6px;
+  max-width:120px;
 }
 
 /* HeaderComponent */
@@ -318,54 +330,6 @@ h5{
   border:2px solid white;
 }
 
-
-/* original-color-overlay-not-using */
-/* .colour-overlay-container-green{
-  position:relative;
-}
-
-.colour-overlay-container-green:after{
-  background: #779A98;
-  color:black;
-  opacity: 0.8;
-  position:absolute;
-  transition:all 0.9s ease-in-out;
-  border-radius:0px;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  content: ' ';
-}
-
-.colour-overlay-container-green:hover:after{
-  opacity: 0;
-} */
-
-
-
-/* .colour-overlay-container-yellow{
-  position:relative;
-}
-
-.colour-overlay-container-yellow:after{
-  background: #FDEE67;
-  color:black;
-  opacity: 0.8;
-  position:absolute;
-  transition:all 0.9s ease-in-out;
-  border-radius:0px;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  content: ' ';
-}
-
-.colour-overlay-container-yellow:hover:after{
-  opacity: 0;
-} */
-
 .work-overlayed-text{
   position:absolute;
   top: 50%;
@@ -519,17 +483,6 @@ h5{
   transition: 300ms ease-in;
 }
 
-/* .page-enter {
-  opacity: 0;
-  transform: translateX(-100%);
-}
-
-.page-enter-active {
-  opacity: 1;
-  transform: translateX(0%);
-  transition: 300ms ease-out;
-} */
-
 /* media-queries */
 
 @media (min-width: 576px){
@@ -547,7 +500,7 @@ h5{
   }
 
   /* AboutComponent */
-.about-me-header{
+.page-header-styling{
   margin-top:-36px;
   }
 
