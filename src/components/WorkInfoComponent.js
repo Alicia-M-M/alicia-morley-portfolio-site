@@ -1,6 +1,8 @@
 import React from 'react';
 import { CardTitle, CardText, Card, CardBody, CardImg, CardFooter, CardSubtitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import { Loading } from './LoadingComponent';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faFigma } from '@fortawesome/free-brands-svg-icons';
@@ -34,6 +36,26 @@ function RenderInfoCard({ example }) {
 }
 
 function WorkInfo(props) {
+    if (props.isLoading) {
+        return (
+            <div className="container">
+                <div className="row">
+                    <Loading />
+                </div>
+            </div>
+        );
+    }
+    if (props.errMess) {
+        return (
+            <div className="container">
+                <div className="row">
+                    <div className="col">
+                        <h4>{props.errMess}</h4>
+                    </div>
+                </div>
+            </div>
+        );
+    }
     if (props.example) {
         return (
             <div className="container-fluid workInfoContainer">

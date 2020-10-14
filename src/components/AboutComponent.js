@@ -2,16 +2,38 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
 import { FadeTransform } from 'react-animation-components';
+import { Loading } from './LoadingComponent';
 
 
 function About(props) {
-    const aboutCards = props.aboutInfo.map(aboutInfos => {
+    const aboutCards = props.aboutInfo.aboutInfo.map(aboutInfos => {
         return (
             <div key={aboutInfos.id}>
                 <RenderAboutCards aboutInfos={aboutInfos} />
             </div>
         )
     });
+
+    if (props.aboutInfo.isLoading) {
+        return (
+            <div className="container">
+                <div className="row">
+                    <Loading />
+                </div>
+            </div>
+        );
+    }
+    if (props.aboutInfo.errMess) {
+        return (
+            <div className="container">
+                <div className="row">
+                    <div className="col">
+                        <h4>{props.aboutInfo.errMess}</h4>
+                    </div>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <>
@@ -97,8 +119,8 @@ function RenderAboutCards({ aboutInfos }) {
                     </p>
                 </ModalBody>
                 <ModalFooter className="text-center py-4 mt-2">
-                <div className="button-background">
-                    <Button className="mx-auto" onClick={handleClick}><div className="button-text">{aboutInfos.button}</div></Button>{' '}
+                <div className="button-background mx-auto">
+                    <Button onClick={handleClick}><div className="button-text">{aboutInfos.button}</div></Button>{' '}
                     </div>
                 </ModalFooter>
             </Modal>

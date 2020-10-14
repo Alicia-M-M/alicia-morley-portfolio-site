@@ -1,8 +1,8 @@
 import React from 'react';
-
+import { Loading } from './LoadingComponent';
 
 function Graphic(props) {
-    const graphic = props.hero.map(info => {
+    const graphic = props.hero.hero.map(info => {
         return (
             <>
             <div key={info.id}>
@@ -11,6 +11,27 @@ function Graphic(props) {
             </>
         )
     });
+
+    if (props.hero.isLoading) {
+        return (
+            <div className="container">
+                <div className="row">
+                    <Loading />
+                </div>
+            </div>
+        );
+    }
+    if (props.hero.errMess) {
+        return (
+            <div className="container">
+                <div className="row">
+                    <div className="col">
+                        <h4>{props.hero.errMess}</h4>
+                    </div>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div id="home_id" className="container-fluid">

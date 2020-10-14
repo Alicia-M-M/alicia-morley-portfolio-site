@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import { Loading } from './LoadingComponent';
 
 function RenderWorkCardItem({ example }) {
 
@@ -26,13 +27,35 @@ function RenderWorkCardItem({ example }) {
 }
 
 function Work(props) {
-    const work = props.examples.map(example => {
+    const work = props.examples.examples.map(example => {
         return (
             <div key={example.id} className={`col-md-6 col-sm-12 pb-4 ${example.id === 2 ? ' order-last' : ' order-md-last'}`}>
                 <RenderWorkCardItem example={example} />
             </div>
         )
     });
+
+
+    if (props.examples.isLoading) {
+        return (
+            <div className="container">
+                <div className="row">
+                    <Loading />
+                </div>
+            </div>
+        );
+    }
+    if (props.examples.errMess) {
+        return (
+            <div className="container">
+                <div className="row">
+                    <div className="col">
+                        <h4>{props.examples.errMess}</h4>
+                    </div>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div className="container-fluid container-background-color container-height">
