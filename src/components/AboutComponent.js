@@ -110,7 +110,7 @@ function RenderAboutCards({ aboutInfos }) {
                 </div>
             </FadeTransform>
             <Modal isOpen={modal} toggle={toggle}>
-                <ModalBody className="mx-auto" >
+                <ModalBody className="mx-auto text-center" >
                     <ModalHeader toggle={toggle}></ModalHeader>
                     <img width="100%" src={aboutInfos.img} alt={aboutInfos.imgheader} />
                     <h3 className="py-4 text-center">{aboutInfos.imgheader}</h3>

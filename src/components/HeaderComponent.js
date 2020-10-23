@@ -24,7 +24,7 @@ class Header extends Component {
         return (
             <Navbar light sticky="top" expand="md">
                 <div className="container-fluid">
-                    <NavbarBrand className="mr-auto" href="/home">ALICIA MORLEY</NavbarBrand>
+                    <NavbarBrand className="mr-auto" tag={NavLink} to={'/mainpage'}>ALICIA MORLEY</NavbarBrand>
                     <NavbarToggler onClick={this.toggleNav} />
                     <Collapse isOpen={this.state.isNavOpen} navbar>
                         <Nav navbar className="ml-auto" >
