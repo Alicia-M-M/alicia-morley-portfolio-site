@@ -4,7 +4,6 @@ import Graphic from './GraphicComponent';
 import About from './AboutComponent';
 import Footer from './FooterComponent';
 import Work from './WorkComponent';
-import WorkInfo from './WorkInfoComponent';
 import Contact from './ContactComponent';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -40,15 +39,15 @@ class Main extends Component {
 
     render() {
 
-        const WorkMatchClick = ({ match }) => {
-            return (
-                <WorkInfo
-                    example={this.props.examples.examples.filter(example => example.id === +match.params.exampleId)[0]}
-                    isLoading={this.props.examples.isLoading}
-                    errMess={this.props.examples.errMess}
-                />
-            );
-        }
+        // const WorkMatchClick = ({ match }) => {
+        //     return (
+        //         <WorkInfo
+        //             example={this.props.examples.examples.filter(example => example.id === +match.params.exampleId)[0]}
+        //             isLoading={this.props.examples.isLoading}
+        //             errMess={this.props.examples.errMess}
+        //         />
+        //     );
+        // }
 
         const MainPage = () => {
             return (
@@ -68,7 +67,7 @@ class Main extends Component {
                         <Switch>
                             <Route exact path='/home' component={MainPage} />
                             <Route exact path='/work' render={() => <Work examples={this.props.examples} />} />
-                            <Route path='/work/:exampleId' component={WorkMatchClick} />
+                            {/* <Route path='/work/:exampleId' component={WorkMatchClick} /> */}
                             <Route exact path='/contactme' render={() => <Contact resetMessageForm={this.props.resetMessageForm} />} />
                             <Redirect to='/home' />
                         </Switch>

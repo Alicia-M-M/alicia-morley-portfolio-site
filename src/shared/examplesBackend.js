@@ -1,0 +1,32 @@
+export const EXAMPLESBACKEND =[
+    {
+        id: 0,
+        name: "PROJECT INFO 1",
+        software: "BACKEND",
+        description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. ",
+        image: "/assets/images/project-3-image.png",
+        github: "https://github.com/Alicia-M-M",
+        figma: "https://www.figma.com/",
+        linkedIn: "https://www.linkedin.com/",
+    },
+    {
+        id: 1,
+        name: "PROJECT INFO 2",
+        software: "BACKEND",
+        description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. ",
+        image: "/assets/images/project-3-image.png",
+        github: "https://github.com/Alicia-M-M",
+        figma: "https://www.figma.com/",
+        linkedIn: "https://www.linkedin.com/",
+    },
+    {
+        id: 2,
+        name: "PROJECT INFO 3",
+        software: "BACKEND",
+        description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. ",
+        image: "/assets/images/project-3-image.png",
+        github: "https://github.com/Alicia-M-M",
+        figma: "https://www.figma.com/",
+        linkedIn: "https://www.linkedin.com/",
+    },
+]

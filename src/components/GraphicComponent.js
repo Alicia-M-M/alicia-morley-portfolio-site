@@ -5,9 +5,9 @@ function Graphic(props) {
     const graphic = props.hero.hero.map(info => {
         return (
             <>
-            <div key={info.id}>
-                <RenderHeroGraphicItem info={info} />
-            </div>
+                <div key={info.id}>
+                    <RenderHeroGraphicItem info={info} />
+                </div>
             </>
         )
     });
@@ -57,12 +57,5 @@ function RenderHeroGraphicItem({ info }) {
     )
 
 }
-
-
-
-
-
-
-
 
 export default Graphic;

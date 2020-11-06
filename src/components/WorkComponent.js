@@ -1,17 +1,25 @@
-import React from "react";
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 import { Loading } from './LoadingComponent';
+import { Modal, ModalHeader, ModalBody } from 'reactstrap';
+import WorkGallery from './WorkGalleryComponent';
+import WorkGalleryTwo from './WorkGalleryComponentTwo';
 
 function RenderWorkCardItem({ example }) {
+    // modal
+    const [modal, setModal] = useState(false);
 
+    const toggle = () => setModal(!modal);
+
+
+    // styling
     const workOverlay = (example.color) ? 'colour-overlay-container-green' : 'colour-overlay-container-yellow';
 
     const workText = (example.textColor) ? ' white-info-text' : ' black-info-text';
 
     const boxBackground = (example.textColor) ? ' work-overlayed-text' : ' work-overlayed-text-2';
     return (
-        <Link to={`/work/${example.id}`}>
-            <div className="work-container-styles">
+        <>
+            <div className="work-container-styles" onClick={toggle}>
                 <div className={`${workOverlay}`}>
                     <img className="card-work-info-photo img-fluid" src={example.image} alt={example.name} />
                 </div>
@@ -22,7 +30,15 @@ function RenderWorkCardItem({ example }) {
                     </div>
                 </div>
             </div>
-        </Link>
+            <Modal centered isOpen={modal} toggle={toggle} contentClassName="gallery-card-modal" >
+                <ModalBody className="mx-auto text-center" >
+                    <ModalHeader toggle={toggle}></ModalHeader>
+                    <div>
+                        {(example.id === 0) ? <WorkGallery /> : <WorkGalleryTwo />}
+                    </div>
+                </ModalBody>
+            </Modal>
+        </>
     )
 }
 

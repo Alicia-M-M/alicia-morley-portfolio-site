@@ -434,6 +434,17 @@ background-color: transparent;
   color: grey;
 }
 
+/* WorkComponentCarousel  */
+.gallery-card-modal{
+  background-color: #FCF9ED;
+}
+
+/* ModalWorkCards */
+
+.container-work-modal-card{
+  display:flex;
+  flex-direction: row;
+}
 /* ContactComponent */
 .form-control{
     font-size:0.8rem;
@@ -481,6 +492,14 @@ background-color: transparent;
 .page-exit-active {
   opacity: 0;
   transition: 300ms ease-in;
+}
+
+/* cardCarousel*/
+.inactive {
+  display: none;
+}
+.active {
+  display: block;
 }
 
 /* media-queries */
@@ -591,5 +610,10 @@ h1{
 .workInfoContainer {
   padding-top:80px;
   padding-bottom:100px;
+}
+
+/* WorkComponentCarousel  */
+.gallery-card-modal{
+  width:1500px;
 }
 }

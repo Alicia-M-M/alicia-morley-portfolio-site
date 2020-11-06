@@ -4,7 +4,6 @@ import { useHistory } from "react-router-dom";
 import { FadeTransform } from 'react-animation-components';
 import { Loading } from './LoadingComponent';
 
-
 function About(props) {
     const aboutCards = props.aboutInfo.aboutInfo.map(aboutInfos => {
         return (
@@ -55,7 +54,6 @@ function About(props) {
                     </div>
                 </div>
             </div>
-
         </>
     );
 }
@@ -83,6 +81,7 @@ function RenderAboutCards({ aboutInfos }) {
     const [modal, setModal] = useState(false);
 
     const toggle = () => setModal(!modal);
+
     return (
         <>
             <FadeTransform
@@ -109,7 +108,7 @@ function RenderAboutCards({ aboutInfos }) {
                     </div>
                 </div>
             </FadeTransform>
-            <Modal isOpen={modal} toggle={toggle}>
+            <Modal isOpen={modal} toggle={toggle} centered>
                 <ModalBody className="mx-auto text-center" >
                     <ModalHeader toggle={toggle}></ModalHeader>
                     <img width="100%" src={aboutInfos.img} alt={aboutInfos.imgheader} />
@@ -119,8 +118,8 @@ function RenderAboutCards({ aboutInfos }) {
                     </p>
                 </ModalBody>
                 <ModalFooter className="text-center py-4 mt-2">
-                <div className="button-background mx-auto">
-                    <Button onClick={handleClick}><div className="button-text">{aboutInfos.button}</div></Button>{' '}
+                    <div className="button-background mx-auto">
+                        <Button onClick={handleClick}><div className="button-text">{aboutInfos.button}</div></Button>{' '}
                     </div>
                 </ModalFooter>
             </Modal>
