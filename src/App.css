@@ -492,12 +492,13 @@ flex-direction: column;
   }
 
   /* transitions */
-.page-enter {
+/* .page-enter {
   opacity: 0;
 }
 
 .page-enter-active {
   opacity: 1;
+
   transition: 300ms ease-out;
 }
 
@@ -508,7 +509,7 @@ flex-direction: column;
 .page-exit-active {
   opacity: 0;
   transition: 300ms ease-in;
-}
+} */
 
 /* cardCarousel*/
 .inactive {

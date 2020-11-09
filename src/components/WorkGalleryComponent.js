@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { EXAMPLESREACT } from '../shared/examplesReact';
+import { EXAMPLESBOOTSTRAP } from '../shared/examplesBootstrap';
+import { EXAMPLESMISC } from '../shared/examplesMisc';
+import { EXAMPLESBACKEND } from '../shared/examplesBackend';
 import GenericCard from './GenericCard';
 import CaretBack from './CaretBackComponent'
 import CaretForward from './CaretForwardComponent'
@@ -11,12 +14,16 @@ class WorkGallery extends Component {
         this.onClickBack = this.onClickBack.bind(this)
         this.onClickNext = this.onClickNext.bind(this)
 
+        const DATA =
+            (props.id === 0) ? EXAMPLESREACT
+                : (props.id === 1) ? EXAMPLESBOOTSTRAP
+                    : (props.id === 2) ? EXAMPLESBACKEND
+                        : EXAMPLESMISC;
 
         this.state = {
             activeIndex: 0,
-            examplesReact: EXAMPLESREACT,
-            length: EXAMPLESREACT.length
-
+            data: DATA,
+            length: DATA.length
 
         };
     }
@@ -58,17 +65,17 @@ class WorkGallery extends Component {
                         />
                     </div>
                     <div className="col-md-10 order-1 order-md-2">
-                        {this.state.examplesReact.map((exampleReact) =>
+                        {this.state.data.map((dataInfo) =>
                             <div className={
-                                exampleReact.id === this.state.activeIndex ? 'active' : 'inactive'} key={exampleReact.id} >
+                                dataInfo.id === this.state.activeIndex ? 'active' : 'inactive'} key={dataInfo.id} >
                                 <GenericCard
-                                    name={exampleReact.name}
-                                    image={exampleReact.image}
-                                    software={exampleReact.software}
-                                    description={exampleReact.description}
-                                    figma={exampleReact.figma}
-                                    github={exampleReact.github}
-                                    linkedIn={exampleReact.linkedIn}
+                                    name={dataInfo.name}
+                                    image={dataInfo.image}
+                                    software={dataInfo.software}
+                                    description={dataInfo.description}
+                                    figma={dataInfo.figma}
+                                    github={dataInfo.github}
+                                    linkedIn={dataInfo.linkedIn}
                                 />
                             </div>
                         )}

@@ -1,8 +1,8 @@
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
-// import { FadeTransform } from 'react-animation-components';
 import { Loading } from './LoadingComponent';
+import { FadeTransform } from 'react-animation-components';
 
 function About(props) {
     const aboutCards = props.aboutInfo.aboutInfo.map(aboutInfos => {
@@ -87,7 +87,7 @@ function RenderAboutCards({ aboutInfos }) {
             {/* <FadeTransform
                 in
                 transformProps={{
-                    exitTransform: 'scale(0.5) translatey(50%)'
+                    exitTransform: 'scale(0.5) translatey(100%)'
                 }}> */}
             <div className="row about-info-styling mx-auto mb-5">
                 <div className={`work-container-styles col-md-6 col-12 about-image-styling  ${order}`}>

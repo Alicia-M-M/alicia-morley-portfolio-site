@@ -17,14 +17,14 @@ class Contact extends Component {
         this.state = {
             firstName: '',
             lastName: '',
-            phoneNum: '',
             email: '',
+            phoneNum: '',
             message: '',
             touched: {
                 firstName: false,
                 lastName: false,
-                phoneNum: false,
-                email: false
+                email: false,
+                phoneNum: false
             }
         };
 
@@ -53,11 +53,11 @@ class Contact extends Component {
         return (
             <div className="container-fluid container-background-color container-height">
                 <ContactInfo />
-                <div className="col-md-6 mx-auto">
+                <div className="col-md-8 mx-auto">
                     <Form model="messageForm" onSubmit={values => this.handleSubmit(values)} >
-                        <Row className="form-group column-stacked">
-                            <Col className="mx-auto pb-2">
-                                <Label htmlFor="firstName" >FIRST NAME</Label>
+                        <Row className="form-group">
+                            <Label className="ml-3" htmlFor="firstName" >FIRST NAME</Label>
+                            <Col md={12} className="mx-auto">
                                 <Control.text model=".firstName" id="firstName" name="firstName"
                                     placeholder="First Name"
                                     className="form-control"
@@ -79,8 +79,10 @@ class Contact extends Component {
                                     }}
                                 />
                             </Col>
-                            <Col className="mx-auto">
-                                <Label htmlFor="lastName">LAST NAME</Label>
+                        </Row>
+                        <Row className="form-group">
+                            <Label className="ml-3" htmlFor="lastName">LAST NAME</Label>
+                            <Col md={12} className="mx-auto">
                                 <Control.text model=".lastName" id="lastName" name="lastName"
                                     placeholder="Last Name"
                                     className="form-control"
@@ -103,9 +105,9 @@ class Contact extends Component {
                                 />
                             </Col>
                         </Row>
-                        <Row className="form-group column-stacked">
-                            <Col className="mx-auto pb-2">
-                                <Label htmlfor="email">EMAIL</Label>
+                        <Row className="form-group">
+                            <Label className="ml-3" htmlfor="email">EMAIL</Label>
+                            <Col md={12} className="mx-auto">
                                 <Control.text model=".email" id="email" name="email"
                                     placeholder="Email"
                                     className="form-control"
@@ -125,8 +127,10 @@ class Contact extends Component {
                                     }}
                                 />
                             </Col>
-                            <Col className="mx-auto">
-                                <Label htmlFor="phoneNum" >PHONE</Label>
+                        </Row>
+                        <Row className="form-group">
+                            <Label className="ml-3" htmlFor="phoneNum" >PHONE</Label>
+                            <Col md={12} className="mx-auto">
                                 <Control.text model=".phoneNum" id="phoneNum" name="phoneNum"
                                     placeholder="Phone number"
                                     className="form-control"
@@ -152,15 +156,15 @@ class Contact extends Component {
                             </Col>
                         </Row>
                         <Row className="form-group">
-                            <Col className="mx-auto col-md-12">
-                                <Label htmlFor="message" >MESSAGE</Label>
+                            <Label className="ml-3" htmlFor="message" >MESSAGE</Label>
+                            <Col md={12} className="mx-auto">
                                 <Control.textarea model=".message" id="message" name="message"
                                     className="form-control"
                                     rows="12"
                                 />
                             </Col>
                         </Row>
-                        <Row className="form-group ">
+                        <Row className="form-group">
                             <Col className="text-center mx-auto cream-background">
                                 <div className="button-background-submit mx-auto" >
                                     <Button className="" type="submit"><div className="button-text">SUBMIT</div></Button>
@@ -170,8 +174,6 @@ class Contact extends Component {
                     </Form>
                 </div>
             </div>
-
-
         );
     }
 };

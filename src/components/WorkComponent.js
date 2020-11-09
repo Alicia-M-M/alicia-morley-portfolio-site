@@ -2,11 +2,9 @@ import React, { useState } from 'react';
 import { Loading } from './LoadingComponent';
 import { Modal, ModalHeader, ModalBody } from 'reactstrap';
 import WorkGallery from './WorkGalleryComponent';
-import WorkGalleryTwo from './WorkGalleryComponentTwo';
-import WorkGalleryThree from './WorkGalleryComponentThree';
-import WorkGalleryFour from './WorkGalleryComponentFour';
 
 function RenderWorkCardItem({ example }) {
+
     // modal
     const [modal, setModal] = useState(false);
 
@@ -20,16 +18,17 @@ function RenderWorkCardItem({ example }) {
     const boxBackground = (example.textColor) ? ' work-overlayed-text' : ' work-overlayed-text-2';
 
     // show correct component
-    const imageGallery =
-        (example.id === 0) ?
-            <WorkGallery />
-            : (example.id === 1) ?
-                <WorkGalleryTwo />
-                : (example.id === 2) ?
-                    <WorkGalleryThree />
-                    :
-                    <WorkGalleryFour />
-        ;
+    // const imageGallery =
+    //     (example.id === 0) ?
+    //         <WorkGallery />
+    //         : (example.id === 1) ?
+    //             <WorkGalleryTwo />
+    //             : (example.id === 2) ?
+    //                 <WorkGalleryThree />
+    //                 :
+    //                 <WorkGalleryFour />
+    //     ;
+    // console.log(imageGallery);
 
     return (
         <>
@@ -48,7 +47,8 @@ function RenderWorkCardItem({ example }) {
                 <ModalBody className="mx-auto text-center" >
                     <ModalHeader className="modal-close" toggle={toggle}></ModalHeader>
                     <div>
-                        {imageGallery}
+                        {/* {imageGallery} */}
+                        <WorkGallery id={example.id}/>
                     </div>
                 </ModalBody>
             </Modal>
