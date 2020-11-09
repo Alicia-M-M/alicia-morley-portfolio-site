@@ -6,7 +6,9 @@ const backArrow = <FontAwesomeIcon icon={faCaretLeft} size="2x" />
 
 function CaretBack(props) {
     return (
-        <div className="col-md-1 my-auto"><button className="back-arrow" onClick={props.back}>{backArrow}</button></div>
+        <>
+            <button className="back-arrow" onClick={props.back}>{backArrow}</button>
+        </>
     )
 }
 

@@ -53,10 +53,10 @@ class Contact extends Component {
         return (
             <div className="container-fluid container-background-color container-height">
                 <ContactInfo />
-                <div className="col-md-10 mx-auto">
+                <div className="col-md-6 mx-auto">
                     <Form model="messageForm" onSubmit={values => this.handleSubmit(values)} >
-                        <Row className="form-group">
-                            <Col md={10} className="mx-auto">
+                        <Row className="form-group column-stacked">
+                            <Col className="mx-auto pb-2">
                                 <Label htmlFor="firstName" >FIRST NAME</Label>
                                 <Control.text model=".firstName" id="firstName" name="firstName"
                                     placeholder="First Name"
@@ -79,9 +79,7 @@ class Contact extends Component {
                                     }}
                                 />
                             </Col>
-                        </Row>
-                        <Row className="form-group">
-                            <Col md={10} className="mx-auto">
+                            <Col className="mx-auto">
                                 <Label htmlFor="lastName">LAST NAME</Label>
                                 <Control.text model=".lastName" id="lastName" name="lastName"
                                     placeholder="Last Name"
@@ -105,8 +103,29 @@ class Contact extends Component {
                                 />
                             </Col>
                         </Row>
-                        <Row className="form-group">
-                            <Col md={10} className="mx-auto">
+                        <Row className="form-group column-stacked">
+                            <Col className="mx-auto pb-2">
+                                <Label htmlfor="email">EMAIL</Label>
+                                <Control.text model=".email" id="email" name="email"
+                                    placeholder="Email"
+                                    className="form-control"
+                                    validators={{
+                                        required,
+                                        validEmail
+                                    }}
+                                />
+                                <Errors
+                                    className="text-danger"
+                                    model=".email"
+                                    show="touched"
+                                    component="div"
+                                    messages={{
+                                        required: 'Required',
+                                        validEmail: 'Invalid email address'
+                                    }}
+                                />
+                            </Col>
+                            <Col className="mx-auto">
                                 <Label htmlFor="phoneNum" >PHONE</Label>
                                 <Control.text model=".phoneNum" id="phoneNum" name="phoneNum"
                                     placeholder="Phone number"
@@ -133,30 +152,7 @@ class Contact extends Component {
                             </Col>
                         </Row>
                         <Row className="form-group">
-                            <Col md={10} className="mx-auto">
-                                <Label htmlfor="email">EMAIL</Label>
-                                <Control.text model=".email" id="email" name="email"
-                                    placeholder="Email"
-                                    className="form-control"
-                                    validators={{
-                                        required,
-                                        validEmail
-                                    }}
-                                />
-                                <Errors
-                                    className="text-danger"
-                                    model=".email"
-                                    show="touched"
-                                    component="div"
-                                    messages={{
-                                        required: 'Required',
-                                        validEmail: 'Invalid email address'
-                                    }}
-                                />
-                            </Col>
-                        </Row>
-                        <Row className="form-group">
-                            <Col md={10} className="mx-auto">
+                            <Col className="mx-auto col-md-12">
                                 <Label htmlFor="message" >MESSAGE</Label>
                                 <Control.textarea model=".message" id="message" name="message"
                                     className="form-control"
@@ -165,9 +161,9 @@ class Contact extends Component {
                             </Col>
                         </Row>
                         <Row className="form-group ">
-                            <Col className="text-center mx-auto cream-background" md={{ size: 2, offset: 2 }}>
-                            <div className="button-background-submit mx-auto" >
-                                <Button className="" type="submit"><div className="button-text">SUBMIT</div></Button>
+                            <Col className="text-center mx-auto cream-background">
+                                <div className="button-background-submit mx-auto" >
+                                    <Button className="" type="submit"><div className="button-text">SUBMIT</div></Button>
                                 </div>
                             </Col>
                         </Row>
@@ -180,13 +176,12 @@ class Contact extends Component {
     }
 };
 
-function ContactInfo(props) {
-
+function ContactInfo() {
     return (
         <div className="row">
             <div className="col text-center">
                 <h2 className="page-header-styling mx-auto">CONTACT ME</h2>
-                <p className="mx-auto pt-4">gmail@gmail.com
+                <p className="mx-auto pt-4 pb-3">gmail@gmail.com
                     <br></br>or send me a message:</p>
             </div>
         </div>

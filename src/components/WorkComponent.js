@@ -3,6 +3,8 @@ import { Loading } from './LoadingComponent';
 import { Modal, ModalHeader, ModalBody } from 'reactstrap';
 import WorkGallery from './WorkGalleryComponent';
 import WorkGalleryTwo from './WorkGalleryComponentTwo';
+import WorkGalleryThree from './WorkGalleryComponentThree';
+import WorkGalleryFour from './WorkGalleryComponentFour';
 
 function RenderWorkCardItem({ example }) {
     // modal
@@ -10,13 +12,25 @@ function RenderWorkCardItem({ example }) {
 
     const toggle = () => setModal(!modal);
 
-
     // styling
     const workOverlay = (example.color) ? 'colour-overlay-container-green' : 'colour-overlay-container-yellow';
 
     const workText = (example.textColor) ? ' white-info-text' : ' black-info-text';
 
     const boxBackground = (example.textColor) ? ' work-overlayed-text' : ' work-overlayed-text-2';
+
+    // show correct component
+    const imageGallery =
+        (example.id === 0) ?
+            <WorkGallery />
+            : (example.id === 1) ?
+                <WorkGalleryTwo />
+                : (example.id === 2) ?
+                    <WorkGalleryThree />
+                    :
+                    <WorkGalleryFour />
+        ;
+
     return (
         <>
             <div className="work-container-styles" onClick={toggle}>
@@ -32,9 +46,9 @@ function RenderWorkCardItem({ example }) {
             </div>
             <Modal centered isOpen={modal} toggle={toggle} contentClassName="gallery-card-modal" >
                 <ModalBody className="mx-auto text-center" >
-                    <ModalHeader toggle={toggle}></ModalHeader>
+                    <ModalHeader className="modal-close" toggle={toggle}></ModalHeader>
                     <div>
-                        {(example.id === 0) ? <WorkGallery /> : <WorkGalleryTwo />}
+                        {imageGallery}
                     </div>
                 </ModalBody>
             </Modal>

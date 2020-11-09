@@ -1,4 +1,5 @@
 import React from 'react';
+import { FadeTransform } from 'react-animation-components';
 import { Loading } from './LoadingComponent';
 
 function Graphic(props) {
@@ -42,16 +43,39 @@ function Graphic(props) {
 };
 
 function RenderHeroGraphicItem({ info }) {
+
     return (
         <div className="row mx-auto">
             <div className="col-12 hero-graphic-photo mx-auto">
                 <div className="colour-overlay">
                     <img width="100%" src={info.image} alt={info.title} />
                 </div>
-                <div className="overlayed-text text-center ">
+                {/* <div className="overlayed-text text-center">
                     <h1>{info.title}</h1>
                     <h4 className="graphic-intro-text mx-auto">{info.intro}</h4>
-                </div>
+                </div> */}
+
+
+
+                <FadeTransform
+                    in
+                    transformProps={{ enterTransform: "translatey(-220px)" }}
+                >
+
+                    <h1 className="overlayed-text mx-auto">{info.title}</h1>
+
+                </FadeTransform>
+                <FadeTransform
+                    in
+                    transformProps={{
+                        enterTransform: "translatey(-120px)",
+                    }}
+
+                >
+                    <div className="overlayed-text">
+                        <h4 className="graphic-intro-text  mx-auto text-center">{info.intro}</h4>
+                    </div>
+                </FadeTransform>
             </div>
         </div>
     )

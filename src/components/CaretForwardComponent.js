@@ -6,7 +6,9 @@ const forwardArrow = <FontAwesomeIcon icon={faCaretRight} size="2x" />
 
 function CaretForward(props) {
     return (
-        <div className="col-md-1 my-auto"><button className="back-arrow" onClick={props.forward}>{forwardArrow}</button></div>
+        <>
+            <button className="back-arrow" onClick={props.forward}>{forwardArrow}</button>
+        </>
     )
 }
 

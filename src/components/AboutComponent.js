@@ -1,7 +1,7 @@
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
-import { FadeTransform } from 'react-animation-components';
+// import { FadeTransform } from 'react-animation-components';
 import { Loading } from './LoadingComponent';
 
 function About(props) {
@@ -84,34 +84,39 @@ function RenderAboutCards({ aboutInfos }) {
 
     return (
         <>
-            <FadeTransform
+            {/* <FadeTransform
                 in
                 transformProps={{
                     exitTransform: 'scale(0.5) translatey(50%)'
-                }}>
-                <div className="row about-info-styling mx-auto mb-5">
-                    <div className={`work-container-styles col-md-6 col-12 about-image-styling  ${order}`}>
-                        <div className={`${color}`} onClick={toggle}>
-                            <img className="about-image-styling-direct" width="100%" src={aboutInfos.img} alt={aboutInfos.imgheader} />
-                            <div className="about-overlayed-text">
-                                <h3 className={`text-center${aboutText}`}>{aboutInfos.title}</h3>
-                            </div>
+                }}> */}
+            <div className="row about-info-styling mx-auto mb-5">
+                <div className={`work-container-styles col-md-6 col-12 about-image-styling  ${order}`}>
+                    <div className={`${color}`} onClick={toggle}>
+                        <img className="about-image-styling-direct" width="100%" src={aboutInfos.img} alt={aboutInfos.imgheader} />
+                        <div className="about-overlayed-text">
+                            <h3 className={`text-center${aboutText}`}>{aboutInfos.title}</h3>
                         </div>
                     </div>
-                    <div className="col-md-6 col-12 text-center align-self-center">
-                        <h3 className="py-4">
-                            {aboutInfos.imgheader}
-                        </h3>
-                        <p className="card-text px-4 pb-4">
-                            {aboutInfos.imgtext}
-                        </p>
-                    </div>
                 </div>
-            </FadeTransform>
+                <div className="col-md-6 col-12 text-center align-self-center">
+                    <h3 className="py-4">
+                        {aboutInfos.imgheader}
+                    </h3>
+                    <p className="card-text px-4 pb-4">
+                        {aboutInfos.imgtext}
+                    </p>
+                </div>
+            </div>
+            {/* </FadeTransform> */}
             <Modal isOpen={modal} toggle={toggle} centered>
                 <ModalBody className="mx-auto text-center" >
                     <ModalHeader toggle={toggle}></ModalHeader>
                     <img width="100%" src={aboutInfos.img} alt={aboutInfos.imgheader} />
+                    {/* <video className="about-image-styling-direct" width="100%" autoPlay loop muted>
+                        <source
+                            src={aboutInfos.video}
+                            type="video/mp4" />
+                    </video> */}
                     <h3 className="py-4 text-center">{aboutInfos.imgheader}</h3>
                     <p className="px-4 mx-auto">
                         {aboutInfos.modalText}
@@ -126,5 +131,6 @@ function RenderAboutCards({ aboutInfos }) {
         </>
     );
 }
+
 
 export default About;

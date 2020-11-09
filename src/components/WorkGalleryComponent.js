@@ -51,11 +51,13 @@ class WorkGallery extends Component {
     render() {
         return (
             <div className="container-work-modal-card py-5">
-                <div className="row">
-                    <CaretBack
-                        back={this.onClickBack}
-                    />
-                    <div className="col-md-10">
+                <div className="row align-items-center mx-auto">
+                    <div className="col-6 col-md-1 order-2 order-md-1 mx-auto">
+                        <CaretBack
+                            back={this.onClickBack}
+                        />
+                    </div>
+                    <div className="col-md-10 order-1 order-md-2">
                         {this.state.examplesReact.map((exampleReact) =>
                             <div className={
                                 exampleReact.id === this.state.activeIndex ? 'active' : 'inactive'} key={exampleReact.id} >
@@ -71,9 +73,11 @@ class WorkGallery extends Component {
                             </div>
                         )}
                     </div>
-                    <CaretForward
-                        forward={this.onClickNext}
-                    />
+                    <div className="col-6 col-md-1 order-3 order-md-3 mx-auto">
+                        <CaretForward
+                            forward={this.onClickNext}
+                        />
+                    </div>
                 </div>
             </div>
         );

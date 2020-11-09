@@ -249,6 +249,7 @@ background-color: transparent;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .overlayed-text h4{
   font-size: 1rem;
 }
@@ -393,7 +394,7 @@ background-color: transparent;
   opacity: 0.2;
 }
 
-/* WorkInfoComponent */
+/* WorkGenericCardComponent */
 .card-title{
   font-weight: 900;
   font-size: 1.5rem;
@@ -421,6 +422,11 @@ background-color: transparent;
   border:2px solid rgb(0,0,0);
 }
 
+.workInfoCard{
+  margin-left:20px;
+  margin-right:20px;
+}
+
 .card-text{
   font-size:0.7rem;
 }
@@ -445,6 +451,10 @@ background-color: transparent;
   display:flex;
   flex-direction: row;
 }
+
+.modal-header button.close{
+  color:	#CDD3D3;
+}
 /* ContactComponent */
 .form-control{
     font-size:0.8rem;
@@ -460,6 +470,7 @@ background-color: transparent;
 
 .form-group{
     font-size: 0.8rem;
+    margin-bottom:10px;
   }
 
 .contact-me-container{
@@ -473,6 +484,11 @@ background-color: transparent;
   top:-34px;
   background:linear-gradient(to bottom, #FCF9ED 50%, #E2ACAC 50%);
   max-width: 400px;
+  }
+
+  .column-stacked{
+flex-direction: column;
+/* padding-bottom:8px; */
   }
 
   /* transitions */
@@ -512,6 +528,9 @@ background-color: transparent;
   /* WorkInfoComponent */
   .workInfoCard {
     flex-direction: row;
+    margin-left:0px;
+    margin-right:0px;
+    
   }
 
   h2{
@@ -532,6 +551,10 @@ background-color: transparent;
   margin-top:100px;
 }
 
+/* contact-form */
+.column-stacked{
+  flex-direction: row;
+    }
 }
 
 @media (min-width: 992px) {

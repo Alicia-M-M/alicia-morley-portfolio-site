@@ -9,7 +9,7 @@ class WorkGalleryTwo extends Component {
         super(props);
 
         this.onClickBack = this.onClickBack.bind(this)
-        this.onClickNext= this.onClickNext.bind(this)
+        this.onClickNext = this.onClickNext.bind(this)
 
 
         this.state = {
@@ -49,11 +49,13 @@ class WorkGalleryTwo extends Component {
     render() {
         return (
             <div className="container-work-modal-card py-5">
-                <div className="row">
-                    <CaretBack
-                        back={this.onClickBack}
-                    />
-                    <div className="col-md-10">
+                <div className="row align-items-center mx-auto">
+                    <div className="col-6 col-md-1 order-2 order-md-1 mx-auto">
+                        <CaretBack
+                            back={this.onClickBack}
+                        />
+                    </div>
+                    <div className="col-md-10 order-1 order-md-2">
                         {this.state.examplesBootstrap.map((exampleBootstrap) =>
                             <div className={
                                 exampleBootstrap.id === this.state.activeIndex ? 'active' : 'inactive'} key={exampleBootstrap.id} >
@@ -69,9 +71,11 @@ class WorkGalleryTwo extends Component {
                             </div>
                         )}
                     </div>
-                    <CaretForward
-                        forward={this.onClickNext}
-                    />
+                    <div className="col-6 col-md-1 order-3 order-md-3 mx-auto">
+                        <CaretForward
+                            forward={this.onClickNext}
+                        />
+                    </div>
                 </div>
             </div>
         );
