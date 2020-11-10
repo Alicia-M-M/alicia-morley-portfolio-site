@@ -2,7 +2,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
 import { Loading } from './LoadingComponent';
-import { FadeTransform } from 'react-animation-components';
+import { Fade } from 'react-animation-components';
 
 function About(props) {
     const aboutCards = props.aboutInfo.aboutInfo.map(aboutInfos => {
@@ -43,7 +43,9 @@ function About(props) {
                         <p className="px-4 mx-auto">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. </p>
                     </div>
                 </div>
-                {aboutCards}
+                <Fade in>
+                    {aboutCards}
+                </Fade>
             </div>
             <div className="container py-5">
                 <div className="row">
@@ -82,13 +84,9 @@ function RenderAboutCards({ aboutInfos }) {
 
     const toggle = () => setModal(!modal);
 
+
     return (
         <>
-            {/* <FadeTransform
-                in
-                transformProps={{
-                    exitTransform: 'scale(0.5) translatey(100%)'
-                }}> */}
             <div className="row about-info-styling mx-auto mb-5">
                 <div className={`work-container-styles col-md-6 col-12 about-image-styling  ${order}`}>
                     <div className={`${color}`} onClick={toggle}>
@@ -107,16 +105,15 @@ function RenderAboutCards({ aboutInfos }) {
                     </p>
                 </div>
             </div>
-            {/* </FadeTransform> */}
             <Modal isOpen={modal} toggle={toggle} centered>
                 <ModalBody className="mx-auto text-center" >
                     <ModalHeader toggle={toggle}></ModalHeader>
-                    <img width="100%" src={aboutInfos.img} alt={aboutInfos.imgheader} />
-                    {/* <video className="about-image-styling-direct" width="100%" autoPlay loop muted>
+                    <video className="about-image-styling-modal" width="100%" autoPlay loop muted>
                         <source
                             src={aboutInfos.video}
                             type="video/mp4" />
-                    </video> */}
+                    </video>
+
                     <h3 className="py-4 text-center">{aboutInfos.imgheader}</h3>
                     <p className="px-4 mx-auto">
                         {aboutInfos.modalText}

@@ -9,7 +9,6 @@ import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { actions } from 'react-redux-form';
 import { fetchExamples, fetchAboutInfo, fetchHero, fetchPageLinks } from '../redux/ActionCreators';
-// import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 const mapStateToProps = state => {
     return {
@@ -52,16 +51,12 @@ class Main extends Component {
             <>
                 <div>
                     <Header />
-                    {/* <TransitionGroup>
-                        <CSSTransition key={this.props.location.key} classNames="page" timeout={300}> */}
-                            <Switch>
-                                <Route exact path='/home' component={MainPage} />
-                                <Route exact path='/work' render={() => <Work examples={this.props.examples} />} />
-                                <Route exact path='/contactme' render={() => <Contact resetMessageForm={this.props.resetMessageForm} />} />
-                                <Redirect to='/home' />
-                            </Switch>
-                        {/* </CSSTransition>
-                    </TransitionGroup> */}
+                    <Switch>
+                        <Route exact path='/home' component={MainPage} />
+                        <Route exact path='/work' render={() => <Work examples={this.props.examples} />} />
+                        <Route exact path='/contactme' render={() => <Contact resetMessageForm={this.props.resetMessageForm} />} />
+                        <Redirect to='/home' />
+                    </Switch>
                     <Footer pageLinks={this.props.pageLinks} />
                 </div>
 

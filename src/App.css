@@ -202,6 +202,12 @@ background-color: transparent;
   height:300px;
 }
 
+.about-image-styling-modal{
+  object-fit:cover;
+  height:300px;
+  padding:0 48px
+}
+
 .about-overlayed-text{
   position:absolute;
   top: 50%;
@@ -215,11 +221,6 @@ background-color: transparent;
 /* AboutComponent-Modal */
 .modal-dialog{
   max-width:800px;
-}
-
-.modal-header{
-  position:absolute;
-  right:0px;
 }
 
 .modal-body{
@@ -250,18 +251,20 @@ background-color: transparent;
   transform: translate(-50%, -50%);
 }
 
-.overlayed-text h4{
+.overlayed-text-2{
+  position:absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 1rem;
+  max-width:200px;
 }
+
 .hero-graphic-photo{
   max-width:1366px;
   position: relative;
   color:black;
 } 
-
-.graphic-intro-text{
-  max-width:200px;
-}
 
 .colour-overlay{
   position:relative;
@@ -455,6 +458,11 @@ background-color: transparent;
 .modal-header button.close{
   color:	#CDD3D3;
 }
+
+.modal-work-close{
+  position:absolute;
+  right:0px;
+}
 /* ContactComponent */
 .form-control{
     font-size:0.8rem;
@@ -491,26 +499,6 @@ flex-direction: column;
 /* padding-bottom:8px; */
   }
 
-  /* transitions */
-/* .page-enter {
-  opacity: 0;
-}
-
-.page-enter-active {
-  opacity: 1;
-
-  transition: 300ms ease-out;
-}
-
-.page-exit {
-  opacity: 1;
-}
-
-.page-exit-active {
-  opacity: 0;
-  transition: 300ms ease-in;
-} */
-
 /* cardCarousel*/
 .inactive {
   display: none;
@@ -522,7 +510,9 @@ flex-direction: column;
 /* media-queries */
 
 @media (min-width: 576px){
-
+  h1{
+    font-size: 9rem;
+  }
 }
 
 @media (min-width: 768px){
@@ -556,6 +546,10 @@ flex-direction: column;
 .column-stacked{
   flex-direction: row;
     }
+/* graphicComponent */
+  .overlayed-text{
+    transform:translate(-50%, -45%);
+  }
 }
 
 @media (min-width: 992px) {
@@ -639,5 +633,14 @@ h1{
 /* WorkComponentCarousel  */
 .gallery-card-modal{
   width:1500px;
+}
+
+/* graphicComponent */
+.overlayed-text{
+  transform:translate(-50%, -80%);
+}
+
+.overlayed-text-2{
+  transform:translate(-50%, -150%);
 }
 }

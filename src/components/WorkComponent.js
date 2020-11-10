@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Loading } from './LoadingComponent';
 import { Modal, ModalHeader, ModalBody } from 'reactstrap';
 import WorkGallery from './WorkGalleryComponent';
+import { Fade } from 'react-animation-components';
 
 function RenderWorkCardItem({ example }) {
 
@@ -16,19 +17,6 @@ function RenderWorkCardItem({ example }) {
     const workText = (example.textColor) ? ' white-info-text' : ' black-info-text';
 
     const boxBackground = (example.textColor) ? ' work-overlayed-text' : ' work-overlayed-text-2';
-
-    // show correct component
-    // const imageGallery =
-    //     (example.id === 0) ?
-    //         <WorkGallery />
-    //         : (example.id === 1) ?
-    //             <WorkGalleryTwo />
-    //             : (example.id === 2) ?
-    //                 <WorkGalleryThree />
-    //                 :
-    //                 <WorkGalleryFour />
-    //     ;
-    // console.log(imageGallery);
 
     return (
         <>
@@ -45,10 +33,9 @@ function RenderWorkCardItem({ example }) {
             </div>
             <Modal centered isOpen={modal} toggle={toggle} contentClassName="gallery-card-modal" >
                 <ModalBody className="mx-auto text-center" >
-                    <ModalHeader className="modal-close" toggle={toggle}></ModalHeader>
+                    <ModalHeader className="modal-work-close" toggle={toggle}></ModalHeader>
                     <div>
-                        {/* {imageGallery} */}
-                        <WorkGallery id={example.id}/>
+                        <WorkGallery id={example.id} />
                     </div>
                 </ModalBody>
             </Modal>
@@ -60,7 +47,9 @@ function Work(props) {
     const work = props.examples.examples.map(example => {
         return (
             <div key={example.id} className={`col-md-6 col-sm-12 pb-4 ${example.id === 2 ? ' order-last' : ' order-md-last'}`}>
-                <RenderWorkCardItem example={example} />
+                <Fade in>
+                    <RenderWorkCardItem example={example} />
+                </Fade>
             </div>
         )
     });

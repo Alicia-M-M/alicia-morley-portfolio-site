@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
 
 class Header extends Component {
-
     constructor(props) {
         super(props);
 
@@ -34,7 +33,7 @@ class Header extends Component {
                                     </NavHashLink>
                             </NavItem>
                             <NavItem>
-                                <NavHashLink className="nav-link" to="/mainpage/#about_id" scroll={el => { el.scrollIntoView(true); window.scrollBy(0, (window.innerWidth >= 764 ? -158 : -276 ) )}}>
+                                <NavHashLink className="nav-link" to="/mainpage/#about_id" scroll={el => { el.scrollIntoView(true); window.scrollBy(0, (window.innerWidth >= 764 ? -158 : -276)) }}>
                                     ABOUT
                                 </NavHashLink>
                             </NavItem>
