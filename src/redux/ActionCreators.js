@@ -3,6 +3,10 @@ import { EXAMPLES } from '../shared/examples';
 import { ABOUTINFO } from '../shared/aboutInfo';
 import { HERO } from '../shared/hero';
 import { PAGELINKS } from '../shared/pageLinks';
+import { EXAMPLESBACKEND } from '../shared/examplesBackend';
+import { EXAMPLESREACT } from '../shared/examplesReact';
+import { EXAMPLESBOOTSTRAP } from '../shared/examplesBootstrap';
+import { EXAMPLESMISC } from '../shared/examplesMisc';
 
 
 // examples
@@ -102,4 +106,104 @@ export const pageLinksFailed = errMess => ({
 export const addPageLinks = pageLinks => ({
     type: ActionTypes.ADD_PAGELINKS,
     payload: pageLinks
+});
+
+// examples backend
+
+export const fetchExamplesBackend = () => dispatch => {
+
+    dispatch(examplesBackendLoading());
+
+    setTimeout(() => {
+        dispatch(addExamplesBackend(EXAMPLESBACKEND));
+    }, 2000);
+};
+
+export const examplesBackendLoading = () => ({
+    type: ActionTypes.EXAMPLESBACKEND_LOADING
+});
+
+export const examplesBackendFailed = errMess => ({
+    type: ActionTypes.EXAMPLESBACKEND_FAILED,
+    payload: errMess
+});
+
+export const addExamplesBackend = examplesBackend => ({
+    type: ActionTypes.ADD_EXAMPLESBACKEND,
+    payload: examplesBackend
+});
+
+// examples react
+
+export const fetchExamplesReact = () => dispatch => {
+
+    dispatch(examplesReactLoading());
+
+    setTimeout(() => {
+        dispatch(addExamplesReact(EXAMPLESREACT));
+    }, 2000);
+};
+
+export const examplesReactLoading = () => ({
+    type: ActionTypes.EXAMPLESREACT_LOADING
+});
+
+export const examplesReactFailed = errMess => ({
+    type: ActionTypes.EXAMPLESREACT_FAILED,
+    payload: errMess
+});
+
+export const addExamplesReact = examplesReact => ({
+    type: ActionTypes.ADD_EXAMPLESREACT,
+    payload: examplesReact
+});
+
+// examples bootstrap
+
+export const fetchExamplesBootstrap = () => dispatch => {
+
+    dispatch(examplesBootstrapLoading());
+
+    setTimeout(() => {
+        dispatch(addExamplesBootstrap(EXAMPLESBOOTSTRAP));
+    }, 2000);
+};
+
+export const examplesBootstrapLoading = () => ({
+    type: ActionTypes.EXAMPLESBOOTSTRAP_LOADING
+});
+
+export const examplesBootstrapFailed = errMess => ({
+    type: ActionTypes.EXAMPLESBOOTSTRAP_FAILED,
+    payload: errMess
+});
+
+export const addExamplesBootstrap = examplesBootstrap => ({
+    type: ActionTypes.ADD_EXAMPLESBOOTSTRAP,
+    payload: examplesBootstrap
+});
+
+// examples misc
+
+export const fetchExamplesMisc = () => dispatch => {
+
+    dispatch(examplesMiscLoading());
+
+    setTimeout(() => {
+        dispatch(addExamplesMisc(EXAMPLESMISC));
+    }, 2000);
+};
+
+export const examplesMiscLoading = () => ({
+    type: ActionTypes.EXAMPLESMISC_LOADING
+});
+
+export const examplesMiscFailed = errMess => ({
+    type: ActionTypes.EXAMPLESMISC_FAILED,
+    payload: errMess
+});
+
+export const addExamplesMisc = examplesMisc => ({
+    type: ActionTypes.ADD_EXAMPLESMISC,
+    payload: examplesMisc
 });

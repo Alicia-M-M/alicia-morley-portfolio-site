@@ -4,7 +4,13 @@ import { Modal, ModalHeader, ModalBody } from 'reactstrap';
 import WorkGallery from './WorkGalleryComponent';
 import { Fade } from 'react-animation-components';
 
-function RenderWorkCardItem({ example }) {
+function RenderWorkCardItem({ example, backEndObject, reactObject, bootStrapObject, miscObject }) {
+
+    const DATA =
+        (example.id === 0) ? reactObject
+            : (example.id === 1) ? bootStrapObject
+                : (example.id === 2) ? backEndObject
+                    : miscObject;
 
     // modal
     const [modal, setModal] = useState(false);
@@ -35,7 +41,14 @@ function RenderWorkCardItem({ example }) {
                 <ModalBody className="mx-auto text-center" >
                     <ModalHeader className="modal-work-close" toggle={toggle}></ModalHeader>
                     <div>
-                        <WorkGallery id={example.id} />
+                        <WorkGallery
+                            id={example.id}
+                            DATA={DATA}
+                        // backEndObject={backEndObject}
+                        // reactObject={reactObject}
+                        // bootStrapObject={bootStrapObject}
+                        // miscObject={miscObject}
+                        />
                     </div>
                 </ModalBody>
             </Modal>
@@ -44,16 +57,25 @@ function RenderWorkCardItem({ example }) {
 }
 
 function Work(props) {
+    const backEndObject = props.examplesBackend;
+    const reactObject = props.examplesReact;
+    const bootStrapObject = props.examplesBootstrap;
+    const miscObject = props.examplesMisc;
     const work = props.examples.examples.map(example => {
         return (
             <div key={example.id} className={`col-md-6 col-sm-12 pb-4 ${example.id === 2 ? ' order-last' : ' order-md-last'}`}>
                 <Fade in>
-                    <RenderWorkCardItem example={example} />
+                    <RenderWorkCardItem
+                        example={example}
+                        backEndObject={backEndObject}
+                        reactObject={reactObject}
+                        bootStrapObject={bootStrapObject}
+                        miscObject={miscObject}
+                    />
                 </Fade>
             </div>
         )
     });
-
 
     if (props.examples.isLoading) {
         return (

@@ -1,25 +1,22 @@
 import React, { Component } from 'react';
-import { EXAMPLESREACT } from '../shared/examplesReact';
-import { EXAMPLESBOOTSTRAP } from '../shared/examplesBootstrap';
-import { EXAMPLESMISC } from '../shared/examplesMisc';
-import { EXAMPLESBACKEND } from '../shared/examplesBackend';
 import GenericCard from './GenericCard';
 import CaretBack from './CaretBackComponent'
 import CaretForward from './CaretForwardComponent'
 
+
 class WorkGallery extends Component {
     constructor(props) {
         super(props);
-
         this.onClickBack = this.onClickBack.bind(this)
         this.onClickNext = this.onClickNext.bind(this)
 
-        const DATA =
-            (props.id === 0) ? EXAMPLESREACT
-                : (props.id === 1) ? EXAMPLESBOOTSTRAP
-                    : (props.id === 2) ? EXAMPLESBACKEND
-                        : EXAMPLESMISC;
+        // const DATA =
+        //     (props.id === 0) ? props.reactObject
+        //         : (props.id === 1) ? props.bootStrapObject
+        //             : (props.id === 2) ? props.backEndObject
+        //                 : props.miscObject;
 
+        const DATA = props.DATA;
         this.state = {
             activeIndex: 0,
             data: DATA,
